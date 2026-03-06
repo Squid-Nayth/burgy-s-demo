@@ -1,0 +1,1481 @@
+:root {
+    --bg-dark: #000000;
+    --bg-light: #fdfffe; /* Reverted to white */
+    --brand-red: #e51c1d;
+    --brand-yellow: #ffc72d;
+    --brand-yellow-bright: #ffc72d;
+    --text-light: #fdfffe;
+    --text-dark: #1A1A1A;
+    --border-color: rgba(0, 0, 0, 0.1);
+    --font-heading: 'Bebas Neue', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --transition: all 0.3s ease-in-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: var(--font-heading);
+    letter-spacing: 2px;
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+/* Typography Utilities */
+.section-title {
+    font-size: 4rem; /* Bigger for fast food vibe */
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-top: 5rem;
+    text-transform: uppercase;
+    color: var(--brand-red); /* Using the brand red for main titles */
+    text-shadow: 2px 2px 0px var(--brand-yellow); /* Adding a fun playful shadow */
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 4rem;
+    font-weight: 500;
+    font-family: var(--font-heading);
+    letter-spacing: 1.5px;
+    color: var(--text-dark);
+}
+
+.text-dark { color: var(--text-dark); }
+.text-light { color: var(--text-light); }
+.bold-text { font-weight: 700; margin-bottom: 1rem; }
+.mt-4 { margin-top: 4rem; }
+
+/* Sections */
+.section-dark {
+    background-color: var(--brand-red); /* Changing dark sections to RED */
+    color: var(--text-light);
+    padding: 2rem 2rem 6rem;
+}
+.section-dark .section-title {
+    color: var(--brand-yellow-bright);
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.3);
+}
+.section-dark .section-subtitle {
+    color: var(--text-light);
+}
+
+.section-light {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    padding: 2rem 2rem 6rem;
+}
+
+/* Specific Section Overrides */
+.restaurants {
+    background-color: var(--bg-light); /* Changed to white */
+    color: var(--text-dark);
+}
+.restaurants .section-title {
+    color: var(--brand-red);
+    text-shadow: 2px 2px 0px var(--brand-yellow); /* Keep yellow nuance */
+}
+.restaurants .section-subtitle {
+    color: var(--text-dark);
+}
+
+.notre-carte {
+    background-color: var(--bg-light);
+    padding: 6rem 1rem;
+}
+
+.notre-carte .section-title {
+    color: var(--brand-red);
+    text-shadow: 2px 2px 0px var(--brand-yellow);
+}
+
+.notre-carte .section-subtitle {
+    color: var(--text-dark);
+}
+
+
+/* Buttons */
+.btn-primary {
+    display: inline-block;
+    background-color: var(--brand-yellow-bright);
+    color: var(--brand-red);
+    padding: 15px 40px;
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    border: none;
+    border-radius: 50px; /* Pill shape */
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: var(--transition);
+    letter-spacing: 2px;
+    box-shadow: 0 4px 15px rgba(229, 28, 29, 0.4);
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: var(--brand-red);
+    color: var(--brand-yellow-bright);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(229, 28, 29, 0.6);
+}
+
+.btn-dark {
+    display: inline-block;
+    background-color: var(--brand-red);
+    color: var(--text-light);
+    padding: 15px 40px;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: var(--transition);
+    letter-spacing: 2px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.btn-dark:hover {
+    background-color: var(--brand-yellow);
+    color: var(--text-dark);
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    display: inline-block;
+    border: 3px solid var(--text-light);
+    color: var(--text-light);
+    padding: 12px 35px;
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    border-radius: 50px;
+    background: transparent;
+    transition: var(--transition);
+    letter-spacing: 1px;
+}
+
+.btn-outline:hover {
+    background-color: var(--text-light);
+    color: var(--brand-red);
+}
+
+.btn-small {
+    background-color: var(--brand-yellow-bright);
+    color: var(--brand-red);
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: var(--font-heading);
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.btn-small:hover {
+    background-color: var(--brand-red);
+    color: var(--text-light);
+    transform: translateY(-2px);
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: var(--transition);
+}
+
+.navbar.scrolled {
+    background-color: var(--brand-red); /* Solid red on scroll */
+    padding: 15px 50px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 60px; /* Adjust based on preference */
+    width: auto;
+    transition: var(--transition);
+}
+
+.navbar.scrolled .logo-img {
+    height: 45px; /* Slightly smaller when scrolled */
+}
+
+/* Nav right container */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+/* Nav links styling */
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-family: var(--font-heading);
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--brand-yellow-bright);
+    transform: translateY(-2px);
+}
+
+/* Social Icons in Nav */
+.nav-socials {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.nav-socials a {
+    color: var(--text-light);
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+}
+
+.nav-socials a:hover {
+    color: var(--brand-yellow-bright);
+    transform: scale(1.1);
+}
+
+/* Order Button shown in Image */
+.nav-btn-order {
+    background-color: var(--text-light);
+    color: var(--text-dark) !important;
+    padding: 10px 25px;
+    border-radius: 8px; /* Slightly rounded box */
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: var(--transition);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.nav-btn-order:hover {
+    background-color: var(--brand-yellow-bright);
+    color: var(--text-dark) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* ========== MEGA MENU DROPDOWN ========== */
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown-trigger {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    color: var(--text-light) !important;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-family: var(--font-heading);
+    transition: var(--transition);
+}
+
+.nav-dropdown-trigger:hover {
+    color: var(--brand-yellow-bright) !important;
+}
+
+.nav-dropdown-trigger .chevron {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+    display: inline-block;
+    margin-left: 4px;
+    line-height: 1;
+    position: relative;
+    top: -1px; /* Ajustement vertical */
+}
+
+.nav-dropdown:hover .chevron,
+.nav-dropdown.open .chevron {
+    transform: rotate(180deg);
+}
+
+/* Mega Menu Panel */
+.mega-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+    border-top: 3px solid var(--brand-red);
+    padding: 100px 5% 40px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    z-index: 99;
+}
+
+.nav-dropdown:hover .mega-menu,
+.nav-dropdown.open .mega-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.mega-menu-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.mega-product-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 16px 14px;
+    border-radius: 12px;
+    transition: background 0.25s ease, transform 0.25s ease;
+    text-align: center;
+}
+
+.mega-product-item:hover {
+    background: #f7f7f7;
+    transform: translateY(-5px);
+}
+
+.mega-product-item img {
+    width: 100px;
+    height: 90px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.12));
+    transition: transform 0.3s ease;
+}
+
+.mega-product-item:hover img {
+    transform: scale(1.1) rotate(-3deg);
+}
+
+.mega-product-item span {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    letter-spacing: 0.5px;
+    transition: color 0.2s ease;
+}
+
+.mega-product-item:hover span {
+    color: var(--brand-red);
+}
+
+
+/* Mega-menu active underline on trigger when open */
+.nav-dropdown:hover .nav-dropdown-trigger,
+.nav-dropdown.open .nav-dropdown-trigger {
+    color: var(--brand-yellow-bright) !important;
+    border-bottom: 3px solid var(--brand-yellow-bright);
+    padding-bottom: 4px;
+}
+
+/* Overlay backdrop when mega-menu open */
+.mega-menu-backdrop {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.25);
+    z-index: 98;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.nav-dropdown:hover ~ .mega-menu-backdrop,
+.mega-menu-backdrop.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.menu-btn {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: var(--brand-yellow-bright); /* Menu button background */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 0px rgba(0,0,0,0.3);
+    display: none; /* Hidden on desktop */
+}
+
+.menu-btn .bar {
+    width: 30px;
+    height: 4px;
+    background-color: var(--brand-red);
+    border-radius: 2px;
+    transition: var(--transition);
+}
+
+.menu-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Hero Sections (Main & Restaurant) */
+.hero, .restaurant-hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    background-color: var(--brand-red); /* Fallback */
+}
+
+.restaurant-hero {
+    height: 85vh; /* Slightly different height for variety */
+}
+
+.restaurant-featured-box {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    padding: 3rem 4rem;
+    border-radius: 24px;
+    border: 1px solid rgba(253, 255, 254, 0.2);
+    max-width: 800px;
+    position: relative;
+    z-index: 10;
+}
+
+.restaurant-featured-box h3 {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    color: var(--brand-yellow);
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+}
+
+.restaurant-featured-box p {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--text-light);
+    margin-bottom: 2.5rem;
+    letter-spacing: 3px;
+    opacity: 0.9;
+}
+
+.restaurant-featured-box .card-btns {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 1;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    /* Subtle dark gradient to make text readable but keep video fully visible */
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.7) 100%);
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative; /* Need position relative to make z-index work */
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    margin-top: -50px;
+}
+
+.hero-logo-img {
+    width: 60vw;
+    max-width: 600px;
+    height: auto;
+    margin: 0;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3));
+}
+
+@media (max-width: 768px) {
+    .hero-logo-img {
+        width: 80vw;
+    }
+}
+
+/* Social Section */
+.social-section {
+    padding: 6rem 0;
+    background-color: #000;
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    max-width: 1400px;
+    margin: 4rem auto 3rem auto;
+    padding: 0 20px;
+}
+
+.social-item {
+    position: relative;
+    aspect-ratio: 1 / 1; /* Standard square as in Instagram grids */
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    background: #111;
+    transition: transform 0.3s ease;
+}
+
+.social-item:hover {
+    transform: scale(1.02);
+}
+
+.social-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.play-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0; /* Hidden by default */
+    pointer-events: none;
+    transition: var(--transition);
+}
+
+.social-item:hover .play-overlay {
+    opacity: 1; /* Visible on hover */
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Nouveauté & sections below... */
+.nouveaute-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.nouveaute-img {
+    position: relative;
+    width: 450px;
+    height: 350px;
+    background-color: var(--brand-yellow-bright); /* Bright yellow background */
+    border-radius: 20px;
+    border: 8px solid var(--brand-red); /* Changed from white to brand red */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.2);
+    transform: rotate(3deg);
+}
+
+.product-img {
+    width: 110%; /* Make it pop out potentially */
+    height: 110%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.nouveaute-img:hover {
+    transform: rotate(0deg) translateY(-10px);
+}
+.nouveaute-img:hover .product-img {
+    transform: scale(1.05);
+}
+
+.product-stamp {
+    position: absolute;
+    top: -10px;
+    left: -20px;
+    background: var(--text-dark);
+    color: var(--brand-yellow-bright);
+    font-family: var(--font-heading);
+    padding: 15px 30px;
+    font-size: 2rem;
+    transform: rotate(-15deg);
+    z-index: 2;
+    border-radius: 10px;
+    border: 3px solid var(--brand-yellow-bright);
+    box-shadow: 3px 3px 0px rgba(0,0,0,0.5);
+}
+
+.nouveaute-text {
+    flex: 1;
+    max-width: 450px;
+}
+
+.nouveaute-text h3 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--brand-yellow-bright);
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+}
+
+.nouveaute-text p {
+    margin-bottom: 2.5rem;
+    font-size: 1.2rem;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+.divider {
+    width: 100%;
+    margin-top: 5rem;
+    overflow: hidden;
+}
+.divider svg path {
+    stroke: var(--brand-yellow);
+    stroke-width: 4;
+}
+
+/* Restaurants Cards */
+.card-grid {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto 4rem auto;
+    flex-wrap: wrap;
+}
+
+.restaurant-card {
+    position: relative;
+    width: 320px;
+    height: 480px;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 6px solid var(--brand-yellow); /* Nuance: Yellow border */
+    box-shadow: 8px 8px 0px var(--brand-red);
+    background-color: var(--bg-light); 
+}
+
+.card-img-wrapper {
+    width: 100%;
+    height: 60%; /* Only top part is image */
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.restaurant-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 12px 12px 0px var(--brand-red);
+}
+.restaurant-card:hover img {
+    transform: scale(1.1);
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: var(--brand-yellow); /* Keep nuance of yellow here */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    border-top: 4px solid var(--brand-red);
+}
+
+.card-overlay h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    line-height: 1;
+    color: var(--brand-red);
+}
+
+.card-btns {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Burger Grid Section */
+.burger-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.burger-item {
+    text-align: center;
+    background: var(--bg-light); 
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 3px solid var(--brand-yellow); 
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.burger-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+}
+
+.ingredients-badge {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background: rgba(229, 28, 29, 0.9);
+    color: #fff;
+    padding: 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    transition: bottom 0.4s ease;
+    backdrop-filter: blur(5px);
+}
+
+.burger-item:hover .ingredients-badge {
+    bottom: 0;
+}
+
+.price-tag {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--brand-red);
+    margin-top: 1rem;
+    background: var(--brand-yellow);
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 10px;
+    align-self: center;
+}
+
+.item-choices {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.choice-select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: var(--font-main);
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    cursor: pointer;
+    background: #fff;
+    transition: var(--transition);
+}
+
+.choice-select:hover {
+    border-color: var(--brand-red);
+}
+
+
+.burger-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain; /* Better for burger isolated shots */
+    margin-bottom: 2rem;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy hover */
+}
+
+.burger-item:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(229, 28, 29, 0.15); /* Red shadow glow */
+    border-color: var(--brand-red);
+}
+
+.burger-item:hover img {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.burger-item h4 {
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+    color: var(--brand-red);
+}
+
+.burger-item p {
+    font-size: 1.1rem;
+    color: #555;
+    font-weight: 500;
+}
+
+/* Notre Carte Menu Grid */
+.menu-flyers-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.menu-flyer-item {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 4px solid var(--brand-yellow); /* Yellow nuance */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.menu-flyer-item:hover {
+    transform: scale(1.05) translateY(-10px);
+    box-shadow: 0 20px 40px rgba(229, 28, 29, 0.2);
+    border-color: var(--brand-red);
+}
+
+.menu-flyer-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+@media (max-width: 1200px) {
+    .menu-flyers-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .menu-flyers-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Livraison */
+.livraison {
+    background-color: var(--brand-red); /* Changed from yellow(bg-light) to red for contrast */
+}
+.livraison-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    max-width: 900px;
+    margin: 0 auto 4rem auto;
+    background: var(--bg-light); /* Changed to white */
+    padding: 4rem;
+    border-radius: 30px;
+    border: 5px solid var(--brand-yellow); /* Yellow nuance border */
+    box-shadow: 10px 10px 0px var(--brand-red);
+}
+
+.livraison-infos {
+    flex: 1;
+    color: var(--text-dark);
+}
+
+.livraison-infos p.bold-text {
+    font-size: 2rem;
+    font-family: var(--font-heading);
+    margin-bottom: 0.5rem;
+    color: var(--brand-red);
+    text-transform: uppercase;
+}
+
+.livraison-list {
+    list-style: none;
+    margin-top: 1.5rem;
+}
+
+.livraison-list li {
+    margin-bottom: 1rem;
+    padding-left: 2.5rem;
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Custom Checkmark for list */
+.livraison-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    font-size: 1.5rem;
+    color: var(--brand-red);
+}
+
+.livraison-apps {
+    display: flex;
+    flex-direction: column; /* Stack apps vertically */
+    gap: 1.5rem;
+}
+
+.app-btn-wide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    background-color: var(--text-dark);
+    color: var(--brand-yellow-bright);
+    padding: 15px;
+    border-radius: 15px;
+    gap: 15px;
+    transition: transform 0.3s;
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.app-btn-wide:hover {
+    transform: translateY(-5px) scale(1.05);
+    background-color: #000;
+}
+
+.app-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--text-dark); /* Black footer */
+}
+.footer .section-title {
+    color: var(--text-light);
+    text-shadow: none;
+}
+
+
+.footer-structured {
+    padding-top: 2rem;
+    border-top: 1px solid var(--brand-yellow); /* Changed from semi-transparent white */
+    max-width: 1400px;
+    margin: 0 auto;
+    font-family: var(--font-heading);
+}
+
+.locations-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    text-transform: uppercase;
+    padding: 0 20px;
+}
+
+.locations-grid.single-location {
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+
+.location-col h4 {
+    font-size: 1.5rem;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.address-link {
+    display: inline-block;
+    font-size: 1.3rem;
+    color: #ccc;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-color: rgba(253, 255, 254, 0.4);
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    transition: var(--transition);
+}
+
+.address-link:hover {
+    color: var(--brand-yellow-bright);
+    text-decoration-color: var(--brand-yellow-bright);
+}
+
+.location-col .phone {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+}
+
+.hours p {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin-bottom: 0.4rem;
+    letter-spacing: 1px;
+}
+
+.hours span.day {
+    color: rgba(253, 255, 254, 0.5);
+    margin-right: 8px;
+}
+
+.footer-central-links {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    line-height: 2;
+    text-transform: uppercase;
+}
+
+.footer-central-links p {
+    color: var(--text-light);
+}
+
+.footer-central-links a {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-color: rgba(253, 255, 254, 0.5);
+    transition: var(--transition);
+}
+
+.footer-central-links a:hover {
+    color: var(--brand-yellow-bright);
+    text-decoration-color: var(--brand-yellow-bright);
+}
+
+.footer-legal {
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 0 20px 2rem 20px;
+    font-size: 1rem;
+    color: #888;
+    text-transform: uppercase;
+    font-family: var(--font-heading);
+}
+
+.footer-legal a:hover {
+    color: var(--brand-yellow-bright);
+}
+
+/* Burger Constructor 2D */
+.burger-constructor {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+}
+
+.part-img {
+    position: absolute;
+    width: 320px;
+    height: auto;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+}
+
+.layer-bottom { z-index: 1; transform: translateY(80px); }
+.layer-meat { z-index: 2; transform: translateY(20px); }
+.layer-top { z-index: 3; transform: translateY(-60px); }
+
+/* Animation when changing */
+.part-img.changing {
+    transform: scale(1.1) rotate(5deg);
+    opacity: 0.8;
+}
+.builder-section {
+    min-height: 100vh;
+    padding: 100px 5%;
+    display: flex;
+    align-items: center;
+}
+
+.builder-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 5rem;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.builder-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.step-title {
+    font-size: 1.5rem;
+    color: var(--brand-red);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid rgba(229,28,29,0.2);
+    padding-bottom: 0.5rem;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.opt-item {
+    background: #fff;
+    border: 2px solid #eee;
+    color: var(--text-dark);
+    padding: 15px;
+    text-align: center;
+    border-radius: 12px;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    letter-spacing: 1px;
+    transition: var(--transition);
+}
+
+.opt-item:hover, .opt-item.active {
+    background: var(--brand-red);
+    border-color: var(--brand-red);
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.builder-price {
+    margin-top: 2rem;
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #eee;
+}
+
+.price-val {
+    color: var(--brand-red);
+}
+
+.yellow-text {
+    color: var(--brand-yellow);
+}
+
+.builder-visual {
+    position: relative;
+    height: 600px;
+    background: radial-gradient(circle, #f9f9f9 0%, #eee 100%); /* Lighter background for 2D */
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+}
+
+.builder-overlay-text h2 {
+    font-size: 5rem;
+    line-height: .9;
+    color: var(--brand-red); /* Changed from white for visibility */
+    text-shadow: 2px 2px 0px var(--brand-yellow);
+}
+
+/* Reservation Section */
+.reservation-section {
+    padding: 100px 5%;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 4rem auto 0;
+}
+
+.exp-card {
+    background: var(--bg-light);
+    border: 6px solid var(--brand-red);
+    border-radius: 30px;
+    padding: 3rem;
+    position: relative;
+    box-shadow: 15px 15px 0 var(--brand-yellow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: visible;
+}
+
+.exp-tag {
+    position: absolute;
+    top: -20px;
+    background: var(--brand-yellow);
+    color: var(--brand-red);
+    padding: 5px 20px;
+    font-weight: bold;
+    font-family: var(--font-heading);
+    border-radius: 10px;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.exp-card h4 {
+    font-size: 3rem;
+    color: var(--brand-red);
+    margin-bottom: 0.5rem;
+}
+
+.exp-price {
+    font-size: 2.5rem;
+    font-family: var(--font-heading);
+    color: var(--text-dark);
+    margin-bottom: 2rem;
+}
+
+.exp-details {
+    list-style: none;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.exp-details li::before {
+    content: "🍔";
+    margin-right: 10px;
+}
+
+/* Booking Form */
+.reservation-form {
+    background: #fff;
+    padding: 3.5rem;
+    border-radius: 30px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+    border: 1px solid #eee;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.form-group label {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    color: var(--brand-red);
+}
+
+.form-group input, .form-group select {
+    padding: 15px;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: var(--brand-yellow);
+    outline: none;
+}
+
+.radio-group, .checks {
+    display: flex;
+    gap: 2rem;
+    margin-top: 0.5rem;
+}
+
+.radio-group label, .checks label {
+    color: var(--text-dark) !important;
+    font-size: 1rem !important;
+    font-family: var(--font-body) !important;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .builder-container, .experience-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Responsive Footer adjustments */
+@media (max-width: 900px) {
+    .hero-content h1 {
+        font-size: 6rem;
+    }
+    .livraison-list li::before {
+        display: none;
+    }
+    .livraison-list li {
+        padding-left: 0;
+    }
+    
+    .social-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .locations-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+        text-align: center;
+    }
+    
+    .footer-legal {
+        text-align: center;
+    }
+    
+    .app-btn-wide {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .burger-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nouveaute-img {
+        width: 100%;
+        height: 250px;
+    }
+
+    .hero-content h1 {
+        font-size: 5rem;
+    }
+
+    .card-grid {
+        gap: 2rem;
+    }
+
+    .navbar {
+        padding: 20px;
+    }
+    
+    .navbar.scrolled {
+        padding: 15px 20px;
+    }
+}
+
+/* Under Development Overlay */
+.under-development-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    border-radius: 20px;
+    text-align: center;
+    padding: 2rem;
+    pointer-events: none; /* Allow scrolling if needed, though blur usually blocks interaction */
+}
+
+.under-development-overlay h2 {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    color: var(--brand-yellow);
+    letter-spacing: 3px;
+    text-shadow: 3px 3px 15px rgba(0,0,0,0.7);
+    text-transform: uppercase;
+}

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burgy's - Best Burger in Town</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Lilita+One&family=Chewy&family=Leckerli+One&family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Transparent Navbar -->
+    <nav class="navbar">
+        <a href="#" class="logo-link">
+            <img src="./assets/logo.png" alt="Burgy's Logo" class="logo-img">
+        </a>
+        <div class="nav-right">
+            <div class="nav-links">
+                <a href="#reservation">RÉSERVER</a>
+                <!-- NOS PRODUITS Dropdown -->
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-dropdown-trigger">NOS PRODUITS <span class="chevron">&#9662;</span></a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-inner">
+                            <div class="mega-product-item" onclick="window.location='#burgers'">
+                                <img src="./logos/image-removebg-preview (1).png" alt="Nos Burgers">
+                                <span>Nos Burgers</span>
+                            </div>
+                            <div class="mega-product-item" onclick="window.location='#burgers'">
+                                <img src="./logos/image-removebg-preview (1) copie.png" alt="Nos Menus">
+                                <span>Nos Menus</span>
+                            </div>
+                            <div class="mega-product-item" onclick="window.location='#burgers'">
+                                <img src="./logos/image-removebg-preview (3) copie 2.png" alt="Nos Salades">
+                                <span>Nos Salades</span>
+                            </div>
+                            <div class="mega-product-item" onclick="window.location='#burgers'">
+                                <img src="./logos/image-removebg-preview (2).png" alt="Nos Boissons">
+                                <span>Nos Boissons</span>
+                            </div>
+                            <div class="mega-product-item" onclick="window.location='#burgers'">
+                                <img src="./logos/image-removebg-preview (2) copie 2.png" alt="Nos Desserts">
+                                <span>Nos Desserts</span>
+                            </div>
+                            <div class="mega-product-item" onclick="window.location='#burgers'">
+                                <img src="./logos/image-removebg-preview (1) copie 2.png" alt="Nos Frites">
+                                <span>Nos Frites</span>
+                            </div>
+                            <div class="mega-product-item" onclick="window.location='#burgers'">
+                                <img src="./logos/image-removebg-preview (3).png" alt="Nos Sauces">
+                                <span>Nos Sauces</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#carte">NOTRE CARTE</a>
+                <a href="#reseaux">NOS RÉSEAUX</a>
+            </div>
+            <a href="#commander" class="nav-btn-order">CONTACTEZ-NOUS</a>
+        </div>
+        <div class="menu-btn">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+    <div class="mega-menu-backdrop" id="mega-backdrop"></div>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <video autoplay muted loop playsinline class="hero-bg" id="heroVideo">
+            <source src="./assets/heavy_hitting_promo.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <img src="./assets/logo.png" alt="Burgy's Logo" class="hero-logo-img">
+            <a href="#commander" class="btn-primary">COMMANDER</a>
+        </div>
+    </header>
+
+    <!-- Nouveauté Section -->
+    <section id="nouveaute" class="section-dark nouveaute">
+        <h2 class="section-title">EN CE MOMENT CHEZ BURGY'S</h2>
+        <div class="nouveaute-container">
+            <div class="nouveaute-img">
+                <img src="./assets/Capture d’écran 2026-03-05 à 18.45.09.png" alt="Le Clakos Burger" class="product-img">
+                <div class="product-stamp">NOUVEAU</div>
+            </div>
+            <div class="nouveaute-text">
+                <h3>LE SMASH ULTIME</h3>
+                <p>Découvrez notre toute nouvelle création, croustillante à l'extérieur et brûlante à l'intérieur. Le Spicy Burgy ne vient pas pour jouer. Un incontournable de cette saison !</p>
+                <div class="btn-group">
+                    <a href="#commander" class="btn-outline">DÉCOUVRIR</a>
+                </div>
+            </div>
+        </div>
+        <!-- Squiggly Divider -->
+        <div class="divider">
+            <svg width="100%" height="20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 10 Q 50 20, 100 10 T 200 10 T 300 10 T 400 10 T 500 10 T 600 10 T 700 10 T 800 10 T 900 10 T 1000 10 T 1100 10 T 1200 10 T 1300 10 T 1400 10 T 1500 10 T 1600 10 T 1700 10 T 1800 10 T 1900 10 T 2000 10 T 2100 10" fill="transparent" stroke-width="2" stroke-dasharray="5,5" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- Section Restaurant Principal -->
+    <section class="restaurant-hero" id="restaurants">
+        <video autoplay muted loop playsinline class="hero-bg">
+            <source src="./assets/restaurant_spot.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2 class="section-title">DÉCOUVREZ NOTRE RESTAURANT</h2>
+            <div class="restaurant-featured-box">
+                <h3>LIBREVILLE - GLASS</h3>
+                <p>APRÈS KFC, EN PLEIN COEUR DE LA VILLE</p>
+                <div class="card-btns">
+                    <button class="btn-primary">SUR PLACE</button>
+                    <button class="btn-primary">À EMPORTER</button>
+                    <button class="btn-primary">LIVRAISON</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Burger Builder (2D Interactive) -->
+    <section id="builder" class="section-dark builder-section">
+        <div class="builder-container" style="position: relative;">
+            <div class="builder-visual">
+                <div class="burger-constructor">
+                    <img src="./assets/Capture d’écran 2026-03-05 à 19.04.17.png" class="part-img layer-bottom" id="layer-bottom">
+                    <img src="./assets/Capture d’écran 2026-03-05 à 19.04.54.png" class="part-img layer-meat" id="layer-meat">
+                    <img src="./assets/Capture d’écran 2026-03-05 à 19.04.42.png" class="part-img layer-top" id="layer-top">
+                </div>
+                <div class="builder-overlay-text">
+                    <h2>TON BURGER<br><span class="yellow-text">SUR MESURE</span></h2>
+                </div>
+            </div>
+            <div class="builder-controls">
+                <h3 class="step-title" style="color: var(--brand-yellow); border-bottom-color: var(--brand-yellow);">CRÉER MON BURGER</h3>
+                <div style="flex: 1; display: flex; align-items: center; justify-content: center;">
+                    <p style="font-family: var(--font-heading); font-size: 1.5rem; opacity: 0.7;">Préparez vos papilles...</p>
+                </div>
+            </div>
+            <!-- Blur Overlay -->
+            <div class="under-development-overlay">
+                <h2>EN COURS DE DÉVELOPPEMENT ⚙️</h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Réservation & Packs -->
+    <section id="reservation" class="section-light reservation-section">
+        <h2 class="section-title">VIVRE L'EXPÉRIENCE BURGY'S</h2>
+        <h3 class="section-subtitle">RÉSERVEZ VOTRE PACK OU VOTRE ÉVÉNEMENT PRIVÉ.</h3>
+
+        <div class="experience-grid">
+            <!-- Pack Family -->
+            <div class="exp-card pack-card">
+                <div class="exp-tag">BEST-SELLER</div>
+                <h4>PACK FAMILY</h4>
+                <p class="exp-price">18 500 CFA</p>
+                <div class="pack-visual" style="margin: 1rem 0;">
+                    <img src="./assets/img6.jpg" alt="Pack Family" style="width: 100%; border-radius: 15px;">
+                </div>
+                <ul class="exp-details">
+                    <li><strong>4 BURGERS</strong> au choix</li>
+                    <li><strong>2 GRANDES FRITES</strong></li>
+                    <li><strong>BOISSONS</strong> au choix</li>
+                    <li><strong>DESSERTS</strong> inclus</li>
+                </ul>
+                <button class="btn-dark">RÉSERVER CE PACK</button>
+            </div>
+
+            <!-- Booking Form -->
+            <div class="booking-form-container">
+                <form class="reservation-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>DATE & HEURE</label>
+                            <input type="datetime-local" required>
+                        </div>
+                        <div class="form-group">
+                            <label>NB PERSONNES</label>
+                            <input type="number" min="1" max="50" value="4">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>POUR QUELLE OCCASION ?</label>
+                        <select>
+                            <option>Repas entre amis / Famille</option>
+                            <option>Anniversaire (Déco incluse option)</option>
+                            <option>Sortie Groupe / After School</option>
+                            <option>Soirée Étudiant (+ Réduction)</option>
+                            <option>Afterwork</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>EMPLACEMENT</label>
+                            <select>
+                                <option>SÀLLE INTÉRIEURE (Climatisée)</option>
+                                <option>TERRASSE (Air libre)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>OPTIONS AMBIANCE</label>
+                            <div class="checks-vertical" style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem;">
+                                <label style="display: flex; align-items: center; gap: 8px; color: var(--text-dark); cursor: pointer;"><input type="checkbox"> Décoration simple</label>
+                                <label style="display: flex; align-items: center; gap: 8px; color: var(--text-dark); cursor: pointer;"><input type="checkbox"> Choix de la musique</label>
+                                <label style="display: flex; align-items: center; gap: 8px; color: var(--text-dark); cursor: pointer;"><input type="checkbox"> Menu groupe sur mesure</label>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-primary w-100">VALIDER MA RÉSERVATION</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Burgers Section -->
+    <section id="burgers" class="section-light burgers">
+        <h2 class="section-title text-dark">NOS BURGERS GOURMETS</h2>
+        <h3 class="section-subtitle">DU GOÛT. DU PLAISIR. LA VARIÉTÉ EST LA VRAIE STAR.</h3>
+        
+        <div class="burger-grid">
+            <div class="burger-item">
+                <div class="burger-image-container">
+                    <img src="./assets/Capture d’écran 2026-03-05 à 19.04.42.png" alt="Burger 1">
+                    <div class="ingredients-badge">PAIN BRIOCHÉ • BŒUF • CHEDDAR • SAUCE MAISON</div>
+                </div>
+                <h4>LE CLASSIQUE SMASHÉ</h4>
+                <p>Bœuf local smashé, cheddar fondu à point, oignons caramélisés.</p>
+                <div class="item-choices">
+                    <select class="choice-select">
+                        <option>TAILLE : CLASSIQUE</option>
+                        <option>TAILLE : XL (+1000)</option>
+                    </select>
+                    <select class="choice-select">
+                        <option>EXTRA : AUCUN</option>
+                        <option>EXTRA : BACON (+500)</option>
+                        <option>EXTRA : CHEESE (+500)</option>
+                    </select>
+                </div>
+                <div class="price-tag">4 500 CFA</div>
+            </div>
+            <div class="burger-item">
+                <div class="burger-image-container">
+                    <img src="./assets/Capture d’écran 2026-03-05 à 19.04.54.png" alt="Burger 2">
+                    <div class="ingredients-badge">POULET • PICKLES • MAYO ÉPICÉE</div>
+                </div>
+                <h4>LE SPICY CHICKEN</h4>
+                <p>Poulet frit croustillant, mayonnaise épicée secrète, pickles acidulés.</p>
+                <div class="item-choices">
+                    <select class="choice-select">
+                        <option>TAILLE : CLASSIQUE</option>
+                        <option>TAILLE : XL (+1000)</option>
+                    </select>
+                    <select class="choice-select">
+                        <option>EXTRA : AUCUN</option>
+                        <option>EXTRA : AVOCAT (+500)</option>
+                        <option>EXTRA : CHEESE (+500)</option>
+                    </select>
+                </div>
+                <div class="price-tag">4 500 CFA</div>
+            </div>
+            <div class="burger-item">
+                <div class="burger-image-container">
+                    <img src="./assets/Capture d’écran 2026-03-05 à 19.05.04.png" alt="Burger 3">
+                    <div class="ingredients-badge">DOUBLE BŒUF • DOUBLE CHEDDAR • BACON</div>
+                </div>
+                <h4>LE BIG BURGY XXL</h4>
+                <p>Pour les vrais gourmands : double viande, double dose de plaisir.</p>
+                <div class="item-choices">
+                    <select class="choice-select">
+                        <option>DOUBLE PATTY (INCLUS)</option>
+                    </select>
+                    <select class="choice-select">
+                        <option>EXTRA : AUCUN</option>
+                        <option>EXTRA : TRUFFE (+1000)</option>
+                        <option>EXTRA : BACON (+500)</option>
+                    </select>
+                </div>
+                <div class="price-tag">6 500 CFA</div>
+            </div>
+        </div>
+        <div class="center-cta mt-4">
+            <p class="bold-text">PLUS QU'UN BURGER, UN COUP DE FOUDRE.</p>
+            <a href="#commander" class="btn-dark">COMMANDER</a>
+        </div>
+    </section>
+
+    <!-- Notre Carte Section -->
+    <section id="carte" class="section-light notre-carte">
+        <div class="container">
+            <h2 class="section-title">NOTRE CARTE</h2>
+            <h3 class="section-subtitle">DÉCOUVREZ L'UNIVERS BURGY'S À TRAVERS NOS MENUS.</h3>
+            
+            <div class="menu-flyers-grid">
+                <div class="menu-flyer-item fade-in">
+                    <img src="./assets/img3.jpg" alt="Menu Burgy's 1" class="menu-flyer-img">
+                </div>
+                <div class="menu-flyer-item fade-in">
+                    <img src="./assets/img6.jpg" alt="Menu Burgy's 2" class="menu-flyer-img">
+                </div>
+                <div class="menu-flyer-item fade-in">
+                    <img src="./assets/img9.jpg" alt="Menu Burgy's 3" class="menu-flyer-img">
+                </div>
+                <div class="menu-flyer-item fade-in">
+                    <img src="./assets/img20.jpg" alt="Menu Burgy's 4" class="menu-flyer-img">
+                </div>
+            </div>
+            
+            <div class="center-cta mt-4">
+                <a href="#commander" class="btn-primary">COMMANDER MON MENU</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Livraison Section -->
+    <section id="commander" class="section-light livraison">
+        <h2 class="section-title text-dark">COMMANDER BURGY'S CHEZ VOUS ?</h2>
+        <div class="livraison-container" style="position: relative;">
+            <div class="livraison-infos">
+                <p><strong>BUREAU OU CANAPÉ ? COMME VOUS VOULEZ !</strong></p>
+                <p>On s'occupe de tout.</p>
+                <ul class="livraison-list">
+                    <li>Libreville & Alentours</li>
+                    <li>Livraison en moins de 45 minutes</li>
+                    <li>Emballage thermique premium</li>
+                    <li>Commandes groupées disponibles</li>
+                </ul>
+            </div>
+            <div class="livraison-apps">
+                <a href="#" class="app-btn black-square">
+                    <img src="./assets/Capture d’écran 2026-03-05 à 19.05.39.png" class="app-logo" alt="Yango Deli">
+                    <span>YANGO</span>
+                </a>
+                <a href="#" class="app-btn black-square">
+                    <img src="./assets/Capture d’écran 2026-03-05 à 19.05.49.png" class="app-logo" alt="Glovo">
+                    <span>GLOVO</span>
+                </a>
+            </div>
+            <!-- Blur Overlay -->
+            <div class="under-development-overlay">
+                <h2 style="color: var(--brand-red);">EN COURS DE DÉVELOPPEMENT ⚙️</h2>
+            </div>
+        </div>
+        <div class="center-cta">
+            <a href="#" class="btn-dark">EN SAVOIR PLUS</a>
+        </div>
+    </section>
+
+    <!-- Footer / Social Grid -->
+    <footer class="footer">
+        <div class="social-section" id="reseaux">
+            <h2 class="section-title">NOS RÉSEAUX</h2>
+            <div class="social-grid">
+                <a href="https://www.instagram.com/burgys.gabon/" target="_blank" class="social-item">
+                    <video muted loop playsinline class="social-video">
+                        <source src="./assets/social_1.mp4" type="video/mp4">
+                    </video>
+                    <div class="play-overlay"><svg viewBox="0 0 24 24" width="30" height="30" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
+                </a>
+                <a href="https://www.instagram.com/burgys.gabon/" target="_blank" class="social-item">
+                    <video muted loop playsinline class="social-video">
+                        <source src="./assets/social_2.mp4" type="video/mp4">
+                    </video>
+                    <div class="play-overlay"><svg viewBox="0 0 24 24" width="30" height="30" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
+                </a>
+                <a href="https://www.instagram.com/burgys.gabon/" target="_blank" class="social-item">
+                    <video muted loop playsinline class="social-video">
+                        <source src="./assets/social_3.mp4" type="video/mp4">
+                    </video>
+                    <div class="play-overlay"><svg viewBox="0 0 24 24" width="30" height="30" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
+                </a>
+                <a href="https://www.instagram.com/burgys.gabon/" target="_blank" class="social-item">
+                    <video muted loop playsinline class="social-video">
+                        <source src="./assets/social_4.mp4" type="video/mp4">
+                    </video>
+                    <div class="play-overlay"><svg viewBox="0 0 24 24" width="30" height="30" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
+                </a>
+                <a href="https://www.instagram.com/burgys.gabon/" target="_blank" class="social-item">
+                    <video muted loop playsinline class="social-video">
+                        <source src="./assets/social_5.mp4" type="video/mp4">
+                    </video>
+                    <div class="play-overlay"><svg viewBox="0 0 24 24" width="30" height="30" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
+                </a>
+                <a href="https://www.instagram.com/burgys.gabon/" target="_blank" class="social-item">
+                    <video muted loop playsinline class="social-video">
+                        <source src="./assets/social_6.mp4" type="video/mp4">
+                    </video>
+                    <div class="play-overlay"><svg viewBox="0 0 24 24" width="30" height="30" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
+                </a>
+                <a href="https://www.instagram.com/burgys.gabon/" target="_blank" class="social-item">
+                    <video muted loop playsinline class="social-video">
+                        <source src="./assets/social_7.mp4" type="video/mp4">
+                    </video>
+                    <div class="play-overlay"><svg viewBox="0 0 24 24" width="30" height="30" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
+                </a>
+                <a href="https://www.instagram.com/burgys.gabon/" target="_blank" class="social-item">
+                    <video muted loop playsinline class="social-video">
+                        <source src="./assets/social_8.mp4" type="video/mp4">
+                    </video>
+                    <div class="play-overlay"><svg viewBox="0 0 24 24" width="30" height="30" fill="white"><path d="M8 5v14l11-7z"/></svg></div>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-structured">
+            <div class="locations-grid single-location">
+                <div class="location-col">
+                    <h4>BURGY'S LIBREVILLE</h4>
+                    <a href="#" class="address-link">GLASS, APRÈS KFC<br>LIBREVILLE, GABON</a>
+                    <p class="phone">+241 0 0 000 0</p>
+                    <div class="hours">
+                        <p><span class="day">LUN - DIM</span> 11H00 - 23H00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-central-links">
+                <p>FOLLOW US ON INSTAGRAM & TIK TOK <a href="https://www.instagram.com/burgys.gabon/" target="_blank" class="social-handle">@burgys.gabon</a></p>
+                <p>UNE QUESTION ? <a href="#" class="contact-link">CONTACTEZ-NOUS</a></p>
+            </div>
+            
+            <div class="footer-legal" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                <div class="footer-socials" style="display: flex; gap: 1.5rem; align-items: center;">
+                    <a href="https://www.instagram.com/burgys.gabon/" target="_blank" aria-label="Instagram" style="color: var(--text-light); transition: var(--transition);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                    <a href="#" target="_blank" aria-label="TikTok" style="color: var(--text-light); transition: var(--transition);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg>
+                    </a>
+                </div>
+                <a href="#">PRÉFÉRENCES EN MATIÈRE DE COOKIES</a>
+                <div class="figma-mention" style="display: flex; align-items: center; gap: 8px; color: #888; font-size: 0.9rem;">
+                    <span>BUILD BY FIGMA</span>
+                    <svg width="16" height="24" viewBox="0 0 38 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 28.5C19 25.9837 20.0009 23.5706 21.7825 21.7891C23.564 20.0075 25.9771 19.0066 28.4934 19.0066C31.0098 19.0066 33.4229 20.0075 35.2044 21.7891C36.9859 23.5706 37.9868 25.9837 37.9868 28.5L37.9868 37.9934L28.4934 37.9934C25.9771 37.9934 23.564 36.9925 21.7825 35.211C20.0009 33.4294 19 31.0163 19 28.5Z" fill="#1ABCFE"/>
+                        <path d="M0 47.4868C0 44.9704 1.00088 42.5573 2.78248 40.7758C4.56407 38.9942 6.97715 37.9934 9.49346 37.9934H18.9869V47.4868C18.9869 49.9982 17.988 52.4068 16.21 54.1818C14.4319 55.9567 12.0216 56.954 9.51016 56.954C7.00355 56.9531 4.59966 55.9549 2.8226 54.1793C1.04555 52.4037 0.0455141 50.0007 0 47.4868V47.4868Z" fill="#0ACF83"/>
+                        <path d="M0 28.5C0 25.9837 1.00088 23.5706 2.78248 21.7891C4.56407 20.0075 6.97715 19.0066 9.49346 19.0066H18.9869V37.9934H9.49346C6.97715 37.9934 4.56407 36.9925 2.78248 35.211C1.00088 33.4294 0 31.0163 0 28.5V28.5Z" fill="#A259FF"/>
+                        <path d="M0 9.5C0 6.98369 1.00088 4.57059 2.78248 2.78906C4.56407 1.00753 6.97715 0.0065918 9.49346 0.0065918H18.9869V19.0066H9.49346C6.97715 19.0066 4.56407 18.0057 2.78248 16.2241C1.00088 14.4426 0 12.0295 0 9.5V9.5Z" fill="#F24E1E"/>
+                        <path d="M19 0.0065918L28.4984 0.0065918C31.0135 0.0065918 33.4254 1.00693 35.2061 2.78762C36.9868 4.56832 37.9871 6.98021 37.9871 9.49533C37.9871 12.0104 36.9868 14.4223 35.2061 16.203C33.4254 17.9837 31.0135 18.9841 28.4984 18.9841L19 18.9841V0.0065918Z" fill="#FF7262"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
