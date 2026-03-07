@@ -7,7 +7,7 @@
     --text-light: #fdfffe;
     --text-dark: #1A1A1A;
     --border-color: rgba(0, 0, 0, 0.1);
-    --font-heading: 'Bebas Neue', sans-serif;
+    --font-heading: 'Titan One', cursive;
     --font-body: 'Inter', sans-serif;
     --transition: all 0.3s ease-in-out;
 }
@@ -33,7 +33,7 @@ body {
 
 h1, h2, h3, h4, h5 {
     font-family: var(--font-heading);
-    letter-spacing: 2px;
+    letter-spacing: normal; /* No spacing for bubble fonts */
     font-weight: normal;
 }
 
@@ -45,7 +45,7 @@ a {
 
 /* Typography Utilities */
 .section-title {
-    font-size: 4rem; /* Bigger for fast food vibe */
+    font-size: 3.2rem; /* Scaled down from 4rem */
     text-align: center;
     margin-bottom: 2rem;
     padding-top: 5rem;
@@ -56,7 +56,7 @@ a {
 
 .section-subtitle {
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 1.5rem; /* Scaled down from 1.8rem */
     margin-bottom: 4rem;
     font-weight: 500;
     font-family: var(--font-heading);
@@ -140,6 +140,32 @@ a {
     color: var(--brand-yellow-bright);
     transform: translateY(-3px) scale(1.05);
     box-shadow: 0 6px 20px rgba(229, 28, 29, 0.6);
+}
+
+/* Navbar - Account Button Styling */
+.nav-account {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background: #fff;
+    color: var(--brand-red);
+    border-radius: 50%;
+    transition: var(--transition);
+    border: 1px solid rgba(229, 28, 29, 0.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.nav-account:hover {
+    background: var(--brand-yellow);
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.nav-account svg {
+    width: 22px;
+    height: 22px;
 }
 
 .btn-dark {
@@ -239,7 +265,14 @@ a {
 .nav-right {
     display: flex;
     align-items: center;
-    gap: 3rem;
+    gap: 2rem;
+}
+
+.nav-actions {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 1rem;
 }
 
 /* Nav links styling */
@@ -251,9 +284,9 @@ a {
 
 .nav-links a {
     color: var(--text-light);
-    font-size: 1.1rem;
+    font-size: 0.95rem; /* Scaled down for Titan One */
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 0.5px;
     font-family: var(--font-heading);
     transition: var(--transition);
 }
@@ -289,9 +322,9 @@ a {
     padding: 10px 25px;
     border-radius: 8px; /* Slightly rounded box */
     font-family: var(--font-heading);
-    font-size: 1.5rem;
+    font-size: 1.1rem; /* Scaled down for Titan One */
     font-weight: bold;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     text-transform: uppercase;
     transition: var(--transition);
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
@@ -540,13 +573,47 @@ a {
 }
 
 .hero-content {
-    position: relative; /* Need position relative to make z-index work */
+    position: relative;
     z-index: 3;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2.5rem;
-    margin-top: -50px;
+    gap: 2rem;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    font-size: 4.5rem; /* Scaled down from 5.5rem */
+    color: var(--text-light);
+    line-height: 1;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    margin: 0;
+}
+
+.hero-content h1 span {
+    color: var(--brand-yellow);
+}
+
+.hero-content p {
+    color: #fff;
+    font-size: 1.6rem;
+    font-family: var(--font-heading);
+    letter-spacing: 2px;
+    margin: 0;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.hero-btns {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.outline-button {
+    background: #fff !important;
+    color: var(--brand-red) !important;
 }
 
 .hero-logo-img {
@@ -1032,7 +1099,7 @@ a {
     border-top: 1px solid var(--brand-yellow); /* Changed from semi-transparent white */
     max-width: 1400px;
     margin: 0 auto;
-    font-family: var(--font-heading);
+    font-family: 'Bebas Neue', sans-serif; /* Branded but simpler footer font */
 }
 
 .locations-grid {
@@ -1127,7 +1194,8 @@ a {
     font-size: 1rem;
     color: #888;
     text-transform: uppercase;
-    font-family: var(--font-heading);
+    font-family: 'Bebas Neue', sans-serif; /* Branded but simpler footer font */
+    letter-spacing: 1px;
 }
 
 .footer-legal a:hover {
@@ -1478,4 +1546,555 @@ a {
     letter-spacing: 3px;
     text-shadow: 3px 3px 15px rgba(0,0,0,0.7);
     text-transform: uppercase;
+}
+
+/* Quick-Inspired Design Overhaul */
+:root {
+    --brand-red-dark: #b51213;
+    --shadow-soft: 0 10px 40px rgba(0,0,0,0.08);
+}
+
+
+/* Tab-like Navbar */
+.nav-links a.active {
+    color: var(--brand-yellow);
+    border-bottom: 3px solid var(--brand-yellow);
+    padding-bottom: 5px;
+}
+
+/* Promo Banner Section (Quick Style) */
+.promo-section {
+    padding: 6rem 5%;
+    overflow: hidden;
+}
+
+.promo-grid {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    padding: 2rem 0;
+    scrollbar-width: none;
+}
+
+.promo-card {
+    flex: 0 0 400px;
+    height: 500px;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
+}
+
+.promo-card:hover {
+    transform: scale(1.02);
+}
+
+.promo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.promo-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    padding: 2rem;
+    color: #fff;
+}
+
+/* Category Grid (Home Page - Simple Style) */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 3rem auto;
+    text-align: center;
+    padding: 0 5%;
+}
+
+.category-grid .category-item {
+    cursor: pointer;
+    transition: var(--transition);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.category-grid .category-item:hover {
+    transform: translateY(-8px);
+}
+
+.category-grid .category-item img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin-bottom: 1.5rem;
+    filter: drop-shadow(0 15px 40px rgba(0,0,0,0.2));
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.category-grid .category-label {
+    background: var(--brand-red);
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 10px;
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    transform: skew(-10deg);
+}
+
+/* Category Grid - Card Version (Used in nos-produits.html) */
+.category-grid.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 4rem auto;
+    padding: 0 5%;
+}
+
+.category-grid.cards .category-item {
+    background: #f8f1e7;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border: 1px solid rgba(61, 28, 2, 0.05);
+    text-align: center;
+}
+
+.category-grid.cards .category-img-container {
+    padding: 30px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f1e7;
+}
+
+.category-grid.cards .category-item img {
+    width: auto;
+    max-width: 90%;
+    max-height: 90%;
+    margin-bottom: 0;
+}
+
+.category-grid.cards .category-label {
+    background: var(--brand-red);
+    color: #fff;
+    padding: 1.5rem;
+    font-size: 1.4rem;
+    font-family: var(--font-heading);
+    transform: none;
+    border-radius: 0;
+    box-shadow: none;
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+/* --- Product Detail Page Styles --- */
+.product-hero {
+    background: orange; /* Or specific color like in image */
+    padding: 120px 5% 60px;
+    text-align: center;
+    position: relative;
+    color: #fff;
+}
+
+.product-detail-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 5%;
+}
+
+.detail-nav-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 4rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 1rem;
+}
+
+.tab-link {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.tab-link.active {
+    opacity: 1;
+    color: var(--brand-red);
+}
+
+/* Exploded Burger View */
+.exploded-view-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    background: #fdfaf5;
+    padding: 5rem;
+    border-radius: 30px;
+}
+
+.ingredients-list-exploded {
+    list-style: none;
+}
+
+.ingredients-list-exploded li {
+    padding: 10px 0;
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    position: relative;
+}
+
+.ingredients-list-exploded li::before {
+    content: '•';
+    color: var(--brand-red);
+    margin-right: 15px;
+}
+
+.burger-layers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: -20px; /* Slight overlap */
+}
+
+.layer-img {
+    width: 250px;
+    height: auto;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));
+}
+
+/* Allergens Section */
+.allergens-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.allergen-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-soft);
+    font-size: 0.9rem;
+}
+
+/* Smart Account Section */
+.client-account-preview {
+    background: #f9f9f9;
+    padding: 5rem 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+    border-radius: 50px;
+    margin: 4rem 5%;
+    border: 1px solid #eee;
+}
+
+.account-info h2 {
+    font-size: 4rem;
+    color: var(--brand-red);
+    margin-bottom: 2rem;
+}
+
+.points-card {
+    background: var(--brand-yellow);
+    padding: 2rem;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-heading);
+    box-shadow: 10px 10px 0 var(--brand-red);
+}
+
+.nav-user-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--brand-red);
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-family: var(--font-heading);
+}
+
+/* Interactive Menu Animations */
+.burger-item {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 30px;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
+    border: 1px solid #f0f0f0;
+}
+
+.burger-item:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+}
+
+.interactive-img {
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.burger-item:hover .interactive-img {
+    transform: scale(1.15) rotate(5deg);
+}
+
+.ingredients-badge {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    padding: 8px 15px;
+    border-radius: 10px;
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: var(--transition);
+}
+
+.burger-item:hover .ingredients-badge {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.price-tag {
+    font-size: 2rem;
+    color: var(--brand-red);
+    font-family: var(--font-heading);
+    margin: 1.5rem 0 1rem;
+}
+
+/* Page Header for subpages */
+.page-header {
+    background: var(--brand-red);
+    color: #fff;
+    padding: 120px 5% 60px;
+    text-align: center;
+    border-bottom: 10px solid var(--brand-yellow);
+}
+
+.page-header h1 {
+    font-size: 5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.nav-btn-order.active {
+    background: var(--brand-yellow);
+    color: var(--brand-red);
+    transform: scale(1.05);
+}
+
+/* History Items in Account */
+.history-item {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    border-bottom: 1px dashed #ccc;
+    padding: 1rem 0;
+}
+
+/* Category Item active state */
+.category-item:active {
+    transform: scale(0.95);
+}
+
+/* --- Quick-Inspired Homepage Extensions --- */
+
+/* Instagram Section */
+.instagram-promo-section {
+    background: #000;
+    color: #fff;
+    padding: 6rem 5%;
+    position: relative;
+    overflow: hidden;
+}
+
+.instagram-promo-section::before {
+    content: ''; /* Removed text content */
+    position: absolute;
+    right: -50px;
+    top: 50%;
+    transform: translateY(-50%) rotate(15deg);
+    width: 600px;
+    height: 600px;
+    background-image: url('./assets/burgys_B_favicon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.12; /* Keeps it subtle */
+    z-index: 1;
+    pointer-events: none;
+}
+
+.instagram-content {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    position: relative;
+    z-index: 2;
+}
+
+.instagram-text h2 {
+    font-size: 3.5rem;
+    font-family: var(--font-heading);
+    margin-bottom: 1rem;
+}
+
+.instagram-text .handle {
+    font-size: 2rem;
+    color: var(--brand-red);
+    font-family: var(--font-heading);
+    margin-bottom: 2rem;
+    display: block;
+}
+
+.instagram-video-container {
+    width: 300px;
+    height: 530px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 4px solid #333;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.instagram-carousel {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.instagram-carousel-item {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+}
+
+.instagram-carousel-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 1.5rem;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.dot.active {
+    background: var(--brand-red);
+    transform: scale(1.2);
+}
+
+/* Engagements Section (Quick Style) */
+.engagements-banner {
+    background: url('./assets/img3.jpg') center/cover;
+    position: relative;
+    padding: 8rem 5%;
+    color: #fff;
+    text-align: right;
+}
+
+.engagements-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, transparent, rgba(0,0,0,0.7));
+}
+
+.engagements-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin-left: auto;
+}
+
+/* Map Section */
+.map-section {
+    position: relative;
+    height: 600px;
+    background: #f0f0f0;
+}
+
+.google-map {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.map-card {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    background: #fff;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    width: 400px;
+    z-index: 10;
+}
+
+.map-card h3 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--brand-red);
+    margin-bottom: 1rem;
+}
+
+/* Recruitment Teaser */
+.recruitment-section {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./assets/recrutement_bg.png') center/cover;
+    padding: 8rem 5%;
+    color: #fff;
+}
+
+.recruitment-card {
+    background: var(--brand-red);
+    display: inline-block;
+    padding: 3rem;
+    border-radius: 20px;
+    transform: skew(-5deg);
+}
+
+.recruitment-card * {
+    transform: skew(5deg);
 }
