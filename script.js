@@ -1,3 +1,26 @@
+// =============================================
+// Side Menu Accordion (global, used via onclick)
+// =============================================
+function toggleSmenuAccordion(trigger) {
+    const accordion = trigger.closest('.smenu-accordion');
+    const submenu = accordion.querySelector('.smenu-submenu');
+    const isOpen = submenu.classList.contains('open');
+
+    // Close all others in same nav-section
+    const section = accordion.closest('.smenu-nav-section');
+    if (section) {
+        section.querySelectorAll('.smenu-submenu.open').forEach(s => {
+            s.classList.remove('open');
+            s.closest('.smenu-accordion').querySelector('.smenu-nav-item').classList.remove('open');
+        });
+    }
+
+    if (!isOpen) {
+        submenu.classList.add('open');
+        trigger.classList.add('open');
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     // Register GSAP Plugins
     gsap.registerPlugin(ScrollTrigger);
@@ -12,15 +35,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 1b. Mega-Menu / Dropdown control
-    const navDropdown = document.querySelector('.nav-dropdown');
-    const megaBackdrop = document.getElementById('mega-backdrop');
-    if (navDropdown && megaBackdrop) {
-        navDropdown.addEventListener('mouseenter', () => megaBackdrop.classList.add('show'));
-        navDropdown.addEventListener('mouseleave', () => megaBackdrop.classList.remove('show'));
-        megaBackdrop.addEventListener('click', () => {
-            megaBackdrop.classList.remove('show');
-            navDropdown.classList.remove('open');
+    // 1b. Side Menu Control
+    const menuBtn = document.querySelector('.menu-btn');
+    const sideMenu = document.getElementById('sideMenu');
+    const closeMenu = document.getElementById('closeMenu');
+    const menuOverlay = document.getElementById('menuOverlay');
+
+    if (menuBtn && sideMenu) {
+        menuBtn.addEventListener('click', () => {
+            sideMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        const closeSideMenu = () => {
+            sideMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+
+        if (closeMenu) closeMenu.addEventListener('click', closeSideMenu);
+        if (menuOverlay) menuOverlay.addEventListener('click', closeSideMenu);
+        
+        // Close menu when any link (old or new) inside side menu is clicked
+        document.querySelectorAll('.side-nav-links a, .smenu-account-row, .smenu-order-item, .smenu-nav-item:not([onclick]), .smenu-submenu a').forEach(link => {
+            link.addEventListener('click', closeSideMenu);
         });
     }
 

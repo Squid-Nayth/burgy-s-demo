@@ -3,27 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Burgy's - Best Burger in Town</title>
+    <title>Frites & Salades - Burgy's</title>
     <link rel="icon" type="image/png" href="./assets/burgys_B_favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Titan+One&family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Titan+One&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <!-- GSAP for Ultra Animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-
-    <!-- OpenGraph Tags -->
-    <meta property="og:title" content="Burgy's Libreville - Les Meilleurs Burgers Smashés">
-    <meta property="og:description" content="Découvrez l'expérience Burgy's : des burgers smashés, du goût et du plaisir immédiat à Libreville.">
-    <meta property="og:image" content="logos/Capture d’écran 2026-03-07 à 09.10.05.png">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://burgys-libreville.com/">
+    <meta name="description" content="Frites, onion rings, nuggets et salades chez Burgy's.">
 </head>
 <body>
 
-    <!-- Transparent Navbar -->
-    <nav class="navbar">
+    <nav class="navbar scrolled">
         <div class="nav-left">
             <div class="menu-btn">
                 <div class="bar"></div>
@@ -32,7 +24,7 @@
             </div>
             <div class="nav-links">
                 <a href="nos-produits.html">MENU</a>
-                <a href="index.html#engagements">ENGAGEMENTS</a>
+                <a href="engagements.html">ENGAGEMENTS</a>
                 <a href="reservation.html">FAMILLE</a>
             </div>
         </div>
@@ -242,171 +234,67 @@
         </div>
     </div>
 
-    <!-- Hero Section with Presentation Video -->
-    <header class="hero">
-        <video autoplay muted loop playsinline class="hero-bg" id="heroVideo">
-            <source src="./assets/restaurant_spot.mp4" type="video/mp4">
-        </video>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1>L'EXPÉRIENCE BURGY'S<br><span>Les meilleurs burgers de Libreville</span></h1>
-            <p>VENEZ VIVRE L'INSTANT DANS NOTRE RESTAURANTS.</p>
-            <div class="hero-btns">
-                <a href="nos-produits.html" class="btn-primary">NOTRE CARTE</a>
-                <a href="#restaurants" class="btn-primary outline-button">NOTRE RESTAURANT</a>
-            </div>
-        </div>
+    <header class="page-header" style="padding-top:100px;text-align:center;background:#f5a623;color:#fff;padding-bottom:3rem;">
+        <a href="nos-produits.html" style="color:#fff;text-decoration:none;font-size:1rem;margin-bottom:1rem;display:inline-block;">← REVENIR À LA CARTE</a>
+        <h1 style="font-family:var(--font-heading);font-size:3rem;">FRITES & SALADES</h1>
+        <p style="font-family:var(--font-heading);opacity:.8;letter-spacing:2px;">LE BON COMPLÉMENT À TON BURGER.</p>
     </header>
 
-    <!-- En ce moment Section (Quick Style Cards Overlapping) -->
-    <section id="nouveaute" class="promo-section" style="background: #fff;">
-        <h2 class="section-title">EN CE MOMENT</h2>
-        <div class="promo-grid">
-            <div class="promo-card">
-                <img src="./assets/Capture d’écran 2026-03-05 à 19.06.07.png" alt="Promo 1">
-                <div class="promo-overlay">
-                    <h3 style="font-size: 2.5rem;">Nos burgers irrésistibles</h3>
-                    <p>Découvrez nos burgers irrésistibles.</p>
+    <section class="section-light" style="background:#fdfdfd;padding:5rem 5%;">
+        <div class="detail-nav-tabs">
+            <a href="categorie-burgers.html" class="tab-link" style="text-decoration:none;color:inherit;">NOS BURGERS</a>
+            <a href="categorie-menus.html" class="tab-link" style="text-decoration:none;color:inherit;">NOS MENUS</a>
+            <a href="categorie-frites.html" class="tab-link active" style="text-decoration:none;color:inherit;">ACCOMPAGNEMENTS</a>
+            <a href="categorie-boissons.html" class="tab-link" style="text-decoration:none;color:inherit;">BOISSONS</a>
+            <a href="categorie-desserts.html" class="tab-link" style="text-decoration:none;color:inherit;">DESSERTS</a>
+        </div>
+        <div class="burger-grid" style="margin-top:3rem;">
+            <div class="burger-item">
+                <div class="burger-image-container">
+                    <img src="./logos/image-removebg-preview (4) copie 2.png" alt="FRITES CLASSIQUES" class="interactive-img" style="max-height:200px;object-fit:contain;">
                 </div>
+                <h4>FRITES CLASSIQUES</h4>
+                <div class="price-tag">1 500 CFA</div>
             </div>
-            <div class="promo-card">
-                <img src="./assets/Capture d’écran 2026-03-05 à 18.45.09.png" alt="Promo 2">
-                <div class="promo-overlay">
-                    <h3 style="font-size: 2.5rem;">LE SMASH ULTIME</h3>
-                    <p>Croustillant, fondant, inoubliable.</p>
+            <div class="burger-item">
+                <div class="burger-image-container">
+                    <img src="./logos/image-removebg-preview (4) copie 2.png" alt="FRITES XXL ÉPICÉES" class="interactive-img" style="max-height:200px;object-fit:contain;">
                 </div>
+                <h4>FRITES XXL ÉPICÉES</h4>
+                <div class="price-tag">2 000 CFA</div>
             </div>
-            <div class="promo-card">
-                <img src="./assets/Capture d’écran 2026-03-05 à 19.03.38.png" alt="Promo 3">
-                <div class="promo-overlay">
-                    <h3 style="font-size: 2.5rem;">Nos accompagnements gourmands</h3>
-                    <p>La touche finale parfaite.</p>
+            <div class="burger-item">
+                <div class="burger-image-container">
+                    <img src="./logos/image-removebg-preview (4) copie 2.png" alt="FRITES PARMESAN" class="interactive-img" style="max-height:200px;object-fit:contain;">
                 </div>
+                <h4>FRITES PARMESAN</h4>
+                <div class="price-tag">2 500 CFA</div>
             </div>
+            <div class="burger-item">
+                <div class="burger-image-container">
+                    <img src="./logos/image-removebg-preview (4) copie 2.png" alt="ONION RINGS (6 pc)" class="interactive-img" style="max-height:200px;object-fit:contain;">
+                </div>
+                <h4>ONION RINGS (6 pc)</h4>
+                <div class="price-tag">2 000 CFA</div>
+            </div>
+            <div class="burger-item">
+                <div class="burger-image-container">
+                    <img src="./logos/image-removebg-preview (4) copie 2.png" alt="SALADE COLESLAW" class="interactive-img" style="max-height:200px;object-fit:contain;">
+                </div>
+                <h4>SALADE COLESLAW</h4>
+                <div class="price-tag">1 500 CFA</div>
+            </div>
+            <div class="burger-item">
+                <div class="burger-image-container">
+                    <img src="./logos/image-removebg-preview (4) copie 2.png" alt="NUGGETS POULET (6 pc)" class="interactive-img" style="max-height:200px;object-fit:contain;">
+                </div>
+                <h4>NUGGETS POULET (6 pc)</h4>
+                <div class="price-tag">2 500 CFA</div>
+            </div>
+
         </div>
     </section>
 
-    <!-- Instagram Section (Carousel) -->
-    <section class="instagram-promo-section">
-        <div class="instagram-content">
-            <div class="instagram-video-wrapper">
-                <div class="instagram-video-container">
-                    <div class="instagram-carousel" id="instaCarousel">
-                        <div class="instagram-carousel-item">
-                            <video autoplay muted loop playsinline><source src="./assets/social_1.mp4" type="video/mp4"></video>
-                        </div>
-                        <div class="instagram-carousel-item">
-                            <video muted loop playsinline><source src="./assets/social_2.mp4" type="video/mp4"></video>
-                        </div>
-                        <div class="instagram-carousel-item">
-                            <video muted loop playsinline><source src="./assets/social_3.mp4" type="video/mp4"></video>
-                        </div>
-                        <div class="instagram-carousel-item">
-                            <video muted loop playsinline><source src="./assets/social_4.mp4" type="video/mp4"></video>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-dots" id="carouselDots">
-                    <span class="dot active" data-index="0"></span>
-                    <span class="dot" data-index="1"></span>
-                    <span class="dot" data-index="2"></span>
-                    <span class="dot" data-index="3"></span>
-                </div>
-            </div>
-            <div class="instagram-text">
-                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--brand-red);"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                    <h2 style="margin-bottom: 0;">INSTAGRAM</h2>
-                </div>
-                <span class="handle">@BURGYS.GABON</span>
-                <p style="font-size: 1.5rem; max-width: 500px; margin-bottom: 2rem; opacity: 0.8;">Découvrez les coulisses de Burgy's en images et en vidéos. Partagez vos meilleurs moments avec nous !</p>
-                <a href="https://www.instagram.com/burgys.gabon/" target="_blank" class="btn-primary" style="background: #fff; color: #000;">NOUS SUIVRE</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Présentation de la Carte (Replaces Engagements) -->
-    <section class="section-light" style="padding: 6rem 5%; text-align: center; background: #fdfaf5;">
-        <h2 class="section-title">NOTRE CARTE GOURMET</h2>
-        <p style="font-size: 1.5rem; margin: 0 auto 4rem; opacity: 0.7; font-family: var(--font-heading); letter-spacing: 2px; text-align: center; max-width: 800px;">DES PRODUITS FRAIS. UN GOÛT UNIQUE. L'EXPÉRIENCE BURGY'S.</p>
-        
-        <div class="category-grid">
-            <div class="category-item" onclick="window.location='categorie-burgers.html'">
-                <img src="./logos/image-removebg-preview (3).png" alt="Burgers">
-                <div class="category-label">BURGERS</div>
-            </div>
-            <div class="category-item" onclick="window.location='en-construction.html'">
-                <img src="./logos/image-removebg-preview (1) copie.png" alt="Menus">
-                <div class="category-label">MENUS</div>
-            </div>
-            <div class="category-item" onclick="window.location='en-construction.html'">
-                <img src="./logos/image-removebg-preview (4) copie 2.png" alt="Frites">
-                <div class="category-label">FRITES & SALADES</div>
-            </div>
-            <div class="category-item" onclick="window.location='en-construction.html'">
-                <img src="./logos/image-removebg-preview (3) copie 3.png" alt="Desserts">
-                <div class="category-label">DESSERTS</div>
-            </div>
-        </div>
-        <a href="nos-produits.html" class="btn-dark" style="margin-top: 4rem;">VOIR TOUTE LA CARTE</a>
-    </section>
-
-    <!-- Restaurant Location Section with Google Maps -->
-    <section id="restaurants" class="map-section">
-        <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15959.08832049448!2d9.44476025!3d0.3801265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x107f3b8b98357f0f%3A0xc3f8b88888888888!2sGlass%2C%20Libreville!5e0!3m2!1sfr!2sga!4v1709800000000!5m2!1sfr!2sga" allowfullscreen="" loading="lazy"></iframe>
-        <div class="map-card">
-            <h3>NOTRE RESTAURANT</h3>
-            <p style="margin-bottom: 2rem;">Retrouvez le goût Burgy's près de chez vous. Localisation, horaires et services.</p>
-            <div class="location-info">
-                <p><strong>LIBREVILLE - GLASS</strong></p>
-                <p>Après KFC, en plein coeur de la ville</p>
-                <p style="margin-top: 1rem; color: #666;">Ouvert 7j/7 • 11h00 - 23h00</p>
-            </div>
-            <a href="https://maps.google.com" target="_blank" class="btn-primary" style="margin-top: 2rem; width: 100%; text-align: center;">Y ALLER</a>
-        </div>
-    </section>
-
-    <!-- Google Reviews Section -->
-    <section class="reviews-section" style="padding: 8rem 5%; background: #fff;">
-        <h2 class="section-title" style="margin-bottom: 4rem;">CE QUE NOS CLIENTS EN DISENT</h2>
-        <div class="reviews-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 1400px; margin: 0 auto;">
-            <div class="review-card" style="padding: 2.5rem; background: #fdfaf5; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
-                <div style="display: flex; gap: 5px; color: #ffc72d; margin-bottom: 1rem;">
-                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                </div>
-                <p style="font-style: italic; margin-bottom: 1.5rem; font-size: 1.1rem;">"Les meilleurs burgers de LBV sans hésiter. Le pain est incroyable et le service super rapide."</p>
-                <p><strong>Jean-Paul M.</strong> <span style="opacity: 0.5; font-size: 0.9rem;">- Il y a 2 jours</span></p>
-            </div>
-            <div class="review-card" style="padding: 2.5rem; background: #fdfaf5; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
-                <div style="display: flex; gap: 5px; color: #ffc72d; margin-bottom: 1rem;">
-                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                </div>
-                <p style="font-style: italic; margin-bottom: 1.5rem; font-size: 1.1rem;">"Le Smash Burger est une tuerie ! Ambiance sympa et propreté impeccable."</p>
-                <p><strong>Sarah L.</strong> <span style="opacity: 0.5; font-size: 0.9rem;">- Il y a 1 semaine</span></p>
-            </div>
-            <div class="review-card" style="padding: 2.5rem; background: #fdfaf5; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
-                <div style="display: flex; gap: 5px; color: #ffc72d; margin-bottom: 1rem;">
-                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                </div>
-                <p style="font-style: italic; margin-bottom: 1.5rem; font-size: 1.1rem;">"Enfin un vrai fast-food de qualité à Glass. Je recommande vivement le Spicy Chicken."</p>
-                <p><strong>Marc O.</strong> <span style="opacity: 0.5; font-size: 0.9rem;">- Il y a 3 jours</span></p>
-            </div>
-        </div>
-        <div style="text-align: center; margin-top: 4rem; margin-bottom: 4rem;">
-            <a href="https://www.google.com/maps" target="_blank" class="btn-dark" style="font-size: 1.2rem;">LIRE PLUS D'AVIS GOOGLE</a>
-        </div>
-    </section>
-
-    <!-- Recruitment Section (Quick Style) -->
-    <section class="recruitment-section">
-        <div class="recruitment-card">
-            <h2 style="font-family: var(--font-heading); font-size: 3rem;">ON RECRUTE !</h2>
-            <p style="font-size: 1.2rem; margin-top: 1rem;">Envie de rejoindre l'aventure Burgy's ?<br>Déposez votre candidature en ligne.</p>
-            <a href="#" class="btn-small" style="background: var(--brand-yellow); color: var(--brand-red); margin-top: 2rem;">POSTULER</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer class="footer" id="footer">
         <div class="footer-structured">
             <h2 class="footer-brand">BURGY'S</h2>
@@ -424,7 +312,7 @@
                     <h4>L'UNIVERS BURGY'S</h4>
                     <ul>
                         <li><a href="nos-produits.html">MENU</a></li>
-                        <li><a href="index.html#engagements">ENGAGEMENTS</a></li>
+                        <li><a href="engagements.html">ENGAGEMENTS</a></li>
                         <li><a href="reservation.html">FAMILLE</a></li>
                         <li><a href="fidelite.html">FIDÉLITÉ</a></li>
                         <li><a href="contact.html">SAV</a></li>
