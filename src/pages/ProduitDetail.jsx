@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { useParams, useNavigate, Link } from 'react-router-dom'
 import { useCart } from '../context/CartContext'
+import { useAuth } from '../context/AuthContext'
 
 // ─── Images partagées ─────────────────────────────────────────────────────────
 
@@ -443,7 +444,19 @@ export default function ProduitDetail() {
   const navigate = useNavigate()
   const [added, setAdded] = useState(false)
   const [qty, setQty] = useState(1)
+  const [showLoginPrompt, setShowLoginPrompt] = useState(false)
   const { addItem } = useCart()
+  const { user, addFavorite, removeFavorite, isFavorite } = useAuth()
+  const fav = user ? isFavorite(slug, categorie) : false
+
+  const handleToggleFav = () => {
+    if (!user) return
+    if (fav) {
+      removeFavorite(slug, categorie)
+    } else {
+      addFavorite({ slug, categorie, name: product.name, price: product.price, img: product.images[0] })
+    }
+  }
 
   const categoryData = catalogue[categorie] || {}
   const product = categoryData[slug]
@@ -459,6 +472,11 @@ export default function ProduitDetail() {
   }
 
   const handleAddToCart = () => {
+    if (!user) {
+      setShowLoginPrompt(true)
+      setTimeout(() => setShowLoginPrompt(false), 4000)
+      return
+    }
     addItem(product, categorie, slug, qty)
     setAdded(true)
     setTimeout(() => setAdded(false), 2000)
@@ -635,7 +653,28 @@ export default function ProduitDetail() {
 
           {/* Carte produit */}
           <div className="product-card">
-            <h1>{product.name}</h1>
+            <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '1rem', marginBottom: '0.5rem' }}>
+              <h1 style={{ margin: 0 }}>{product.name}</h1>
+              {user && (
+                <button
+                  onClick={handleToggleFav}
+                  title={fav ? 'Retirer des favoris' : 'Ajouter aux favoris'}
+                  style={{
+                    background: fav ? '#fff0f0' : '#fdfaf5',
+                    border: `2px solid ${fav ? 'var(--brand-red)' : '#f0e0d0'}`,
+                    borderRadius: '50%',
+                    width: '44px', height: '44px',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    cursor: 'pointer', flexShrink: 0,
+                    transition: 'all 0.2s',
+                  }}
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill={fav ? 'var(--brand-red)' : 'none'} stroke="var(--brand-red)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                  </svg>
+                </button>
+              )}
+            </div>
             <div className="product-price">{product.price}</div>
             <p className="product-description">{product.description}</p>
 
@@ -646,6 +685,12 @@ export default function ProduitDetail() {
               </ul>
             </div>
 
+            {showLoginPrompt && (
+              <div style={{ background: '#fff3cd', border: '1px solid #ffc107', borderRadius: '12px', padding: '0.9rem 1.1rem', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.8rem', fontSize: '0.88rem', color: '#664d03' }}>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                <span>Vous devez <Link to="/compte" style={{ color: 'var(--brand-red)', fontWeight: 600, textDecoration: 'underline' }}>être connecté</Link> pour ajouter au panier.</span>
+              </div>
+            )}
             <div className="cart-row">
               <div className="qty-control">
                 <button className="qty-btn" onClick={() => setQty(q => Math.max(1, q - 1))}>−</button>

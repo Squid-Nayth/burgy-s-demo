@@ -37,7 +37,7 @@ export default function SideMenu() {
         </div>
 
         <div className="side-menu-body">
-          <Link to="/en-construction" className="smenu-account-row" onClick={close}>
+          <Link to="/compte" className="smenu-account-row" onClick={close}>
             <span className="smenu-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" />
@@ -47,7 +47,7 @@ export default function SideMenu() {
           </Link>
 
           <div className="smenu-order-section">
-            <Link to="/en-construction" className="smenu-order-item" onClick={close}>
+            <Link to="/panier?mode=emporter" className="smenu-order-item" onClick={close}>
               <span className="smenu-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" /><path d="M3 6h18" /><path d="M16 10a4 4 0 0 1-8 0" />
@@ -55,7 +55,7 @@ export default function SideMenu() {
               </span>
               <span className="smenu-label">Commande à emporter</span>
             </Link>
-            <Link to="/reservation" className="smenu-order-item" onClick={close}>
+            <Link to="/panier?mode=table" className="smenu-order-item" onClick={close}>
               <span className="smenu-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="3" y="3" width="18" height="18" rx="2" /><path d="M3 9h18" /><path d="M9 21V9" />
@@ -63,7 +63,7 @@ export default function SideMenu() {
               </span>
               <span className="smenu-label">Commande sur table</span>
             </Link>
-            <Link to="/en-construction" className="smenu-order-item" onClick={close}>
+            <Link to="/panier?mode=livraison" className="smenu-order-item" onClick={close}>
               <span className="smenu-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v3" /><rect x="9" y="11" width="14" height="10" rx="1" /><circle cx="12" cy="19" r="2" /><circle cx="20" cy="19" r="2" />

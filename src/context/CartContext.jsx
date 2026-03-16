@@ -4,6 +4,8 @@ const CartContext = createContext(null)
 
 export function CartProvider({ children }) {
   const [items, setItems] = useState([])
+  const [orderType, setOrderType] = useState(null)   // 'emporter' | 'table' | 'livraison'
+  const [orderDetails, setOrderDetails] = useState({}) // infos selon le mode
 
   const addItem = useCallback((product, categorie, slug, qty = 1) => {
     setItems(prev => {
@@ -28,17 +30,24 @@ export function CartProvider({ children }) {
     }
   }, [])
 
-  const clearCart = useCallback(() => setItems([]), [])
+  const clearCart = useCallback(() => {
+    setItems([])
+    setOrderType(null)
+    setOrderDetails({})
+  }, [])
 
   const totalItems = items.reduce((sum, i) => sum + i.qty, 0)
-
-  // Prix : on parse "4 500 CFA" → 4500
   const parsePrix = (str) => parseInt(str.replace(/\s/g, '').replace('CFA', ''), 10) || 0
   const totalPrice = items.reduce((sum, i) => sum + parsePrix(i.price) * i.qty, 0)
   const formatPrice = (n) => n.toLocaleString('fr-FR').replace(',', ' ') + ' CFA'
 
   return (
-    <CartContext.Provider value={{ items, addItem, removeItem, updateQty, clearCart, totalItems, totalPrice, formatPrice }}>
+    <CartContext.Provider value={{
+      items, addItem, removeItem, updateQty, clearCart,
+      totalItems, totalPrice, formatPrice,
+      orderType, setOrderType,
+      orderDetails, setOrderDetails,
+    }}>
       {children}
     </CartContext.Provider>
   )

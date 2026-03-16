@@ -16,6 +16,7 @@ import Allergenes from './pages/Allergenes'
 import MentionsLegales from './pages/MentionsLegales'
 import EnConstruction from './pages/EnConstruction'
 import Panier from './pages/Panier'
+import Paiement from './pages/Paiement'
 import Compte from './pages/Compte'
 
 function ScrollToTop() {
@@ -54,6 +55,7 @@ function AppLayout() {
           <Route path="/mentions-legales" element={<MentionsLegales />} />
           <Route path="/en-construction" element={<EnConstruction />} />
           <Route path="/panier" element={<Panier />} />
+          <Route path="/paiement" element={<Paiement />} />
           <Route path="/compte" element={<Compte />} />
         </Routes>
       </main>
