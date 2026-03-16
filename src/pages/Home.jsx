@@ -83,7 +83,7 @@ export default function Home() {
       </section>
 	  
 	  {/* Notre carte gourmet */}
-      <section className="section-light" style={{ padding: '6rem 5%', textAlign: 'center', background: '#fdfaf5' }}>
+      <section className="section-light" style={{ padding: 'clamp(3rem, 6vw, 6rem) 5%', textAlign: 'center', background: '#fdfaf5' }}>
         <h2 className="section-title">NOTRE CARTE GOURMET</h2>
         <p style={{ fontSize: '1.5rem', margin: '0 auto 4rem', opacity: 0.7, fontFamily: 'var(--font-heading)', letterSpacing: '2px', textAlign: 'center', maxWidth: '800px' }}>
           DES PRODUITS FRAIS. UN GOÛT UNIQUE. L'EXPÉRIENCE BURGY'S.
@@ -133,7 +133,7 @@ export default function Home() {
       {/* Avis */}
       <section className="reviews-section" style={{ padding: '8rem 5%', background: '#fff' }}>
         <h2 className="section-title" style={{ marginBottom: '4rem' }}>CE QUE NOS CLIENTS EN DISENT</h2>
-        <div className="reviews-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', maxWidth: '1400px', margin: '0 auto' }}>
+        <div className="reviews-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '2rem', maxWidth: '1400px', margin: '0 auto' }}>
           {[
             { name: 'Jean-Paul M.', date: 'Il y a 2 jours', text: '"Les meilleurs burgers de LBV sans hésiter. Le pain est incroyable et le service super rapide."' },
             { name: 'Sarah L.', date: 'Il y a 1 semaine', text: '"Le Smash Burger est une tuerie ! Ambiance sympa et propreté impeccable."' },

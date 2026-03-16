@@ -289,7 +289,8 @@ const css = `
     gap: 0.8rem;
     margin-top: 1.5rem;
   }
-  @media (max-width: 520px) { .fid-levels-mini { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 760px) { .compte-body { padding: 2rem 5% 4rem; } .compte-sidebar { position: static; } }
+  @media (max-width: 520px) { .fid-levels-mini { grid-template-columns: repeat(2, 1fr); } .profil-grid { grid-template-columns: 1fr !important; } .panier-item { grid-template-columns: 60px 1fr; } }
   .fid-level-card {
     border-radius: 14px;
     padding: 1rem;

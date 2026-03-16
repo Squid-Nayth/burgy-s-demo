@@ -2414,3 +2414,171 @@ a {
 .recruitment-card * {
     transform: skew(5deg);
 }
+
+/* ============================================================
+   RESPONSIVE — couche globale mobile-first
+   Breakpoints : 1024px | 768px | 480px
+   ============================================================ */
+
+/* ── Hero ── */
+@media (max-width: 768px) {
+  .hero { height: 100svh; }
+  .hero-content h1 { font-size: 2.8rem; }
+  .hero-content p { font-size: 1.1rem; letter-spacing: 1px; }
+  .hero-btns { flex-direction: column; align-items: center; gap: 1rem; }
+  .btn-primary { font-size: 1.2rem; padding: 12px 28px; }
+  .outline-button { font-size: 1.2rem; padding: 12px 28px; }
+}
+@media (max-width: 480px) {
+  .hero-content h1 { font-size: 2.2rem; }
+  .hero-content p { font-size: 1rem; }
+}
+
+/* ── Section titles ── */
+@media (max-width: 768px) {
+  .section-title { font-size: 2.2rem; padding-top: 3rem; }
+  .section-subtitle { font-size: 1.1rem; }
+}
+
+/* ── Promo cards (horizontal scroll sur mobile) ── */
+@media (max-width: 768px) {
+  .promo-section { padding: 3rem 5%; }
+  .promo-card { flex: 0 0 80vw; height: 360px; }
+}
+@media (max-width: 480px) {
+  .promo-card { flex: 0 0 90vw; height: 300px; }
+}
+
+/* ── Instagram section ── */
+@media (max-width: 900px) {
+  .instagram-content { flex-direction: column; gap: 2.5rem; align-items: center; }
+  .instagram-text { text-align: center; }
+  .instagram-text h2 { font-size: 2.5rem; }
+  .instagram-text .handle { font-size: 1.5rem; }
+}
+@media (max-width: 480px) {
+  .instagram-promo-section { padding: 3.5rem 5%; }
+  .instagram-video-container { width: 240px; height: 420px; }
+}
+
+/* ── Category grid home ── */
+@media (max-width: 768px) {
+  .category-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin: 2rem auto; }
+  .category-grid .category-label { font-size: 1.1rem; padding: 8px 16px; }
+}
+@media (max-width: 480px) {
+  .category-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+}
+
+/* ── Map section ── */
+@media (max-width: 900px) {
+  .map-section { height: auto; display: flex; flex-direction: column; }
+  .google-map { height: 300px; position: static; }
+  .map-card {
+    position: static;
+    transform: none;
+    width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+    border-top: 4px solid var(--brand-yellow);
+    padding: 2rem 5%;
+  }
+}
+
+/* ── Burger grid ── */
+@media (max-width: 900px) {
+  .burger-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+}
+@media (max-width: 520px) {
+  .burger-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .burger-item h4 { font-size: 1.6rem; }
+  .price-tag { font-size: 1.5rem; }
+}
+
+/* ── Livraison ── */
+@media (max-width: 768px) {
+  .livraison-container {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 5%;
+    border-radius: 16px;
+    margin: 0 5% 3rem;
+  }
+  .livraison-apps { flex-direction: row; flex-wrap: wrap; justify-content: center; }
+}
+
+/* ── Recruitment section ── */
+@media (max-width: 768px) {
+  .recruitment-section { padding: 4rem 5%; text-align: center; }
+  .recruitment-card { transform: none; padding: 2rem; display: block; }
+  .recruitment-card * { transform: none; }
+}
+
+/* ── Page header (sous-pages) ── */
+@media (max-width: 768px) {
+  .page-header { padding: 100px 5% 3rem; }
+  .page-header h1 { font-size: 2.8rem; }
+}
+@media (max-width: 480px) {
+  .page-header h1 { font-size: 2.2rem; }
+}
+
+/* ── Engagements ── */
+@media (max-width: 768px) {
+  .pillars-grid { grid-template-columns: 1fr; }
+  .eng-story-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .certifs-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .certifs-grid { grid-template-columns: 1fr; }
+}
+
+/* ── Reservation ── */
+@media (max-width: 900px) {
+  .experience-grid { grid-template-columns: 1fr !important; }
+  .booking-form-container { padding: 0; }
+}
+@media (max-width: 768px) {
+  .reservation-section { padding: 3rem 5% !important; }
+  .form-row { flex-direction: column; }
+}
+
+/* ── Contact / livraison ── */
+@media (max-width: 768px) {
+  .contact-methods { margin-top: 2rem; }
+}
+
+/* ── Recrutement ── */
+@media (max-width: 768px) {
+  .offers-grid { grid-template-columns: 1fr !important; }
+  .values-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .recrut-hero { padding: 110px 5% 4rem; }
+}
+@media (max-width: 480px) {
+  .values-grid { grid-template-columns: 1fr !important; }
+}
+
+/* ── Fidélité ── */
+@media (max-width: 768px) {
+  .fid-hero { padding: 110px 5% 4rem; }
+  .fid-steps::before { display: none; }
+  .fid-steps { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+  .levels-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (max-width: 480px) {
+  .fid-steps { grid-template-columns: 1fr; }
+  .levels-grid { grid-template-columns: 1fr !important; }
+}
+
+/* ── Allergènes ── */
+@media (max-width: 768px) {
+  .allerg-hero { padding: 100px 5% 3rem; }
+  .allerg-body { padding: 2rem 5% 4rem; }
+  .allerg-category h2 { font-size: 1.4rem; }
+}
+
+/* ── Mentions légales ── */
+@media (max-width: 768px) {
+  .legal-body { padding: 3rem 5% 4rem; }
+  .legal-section h2 { font-size: 1.6rem; }
+}

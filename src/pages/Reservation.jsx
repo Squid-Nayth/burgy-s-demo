@@ -16,6 +16,14 @@ export default function Reservation() {
 
   return (
     <>
+      <style>{`
+        @media (max-width: 600px) {
+          .form-row { flex-direction: column !important; }
+          .reservation-form button { font-size: 1rem; }
+          .experience-grid { grid-template-columns: 1fr !important; gap: 2rem; }
+          .exp-card { padding: 1.5rem; }
+        }
+      `}</style>
       <PageHeader title="COIN PERSONNALISÉ" subtitle="RÉSERVEZ VOTRE EXPÉRIENCE BURGY'S" />
       <section id="reservation" className="section-light reservation-section">
           {/* Formulaire */}

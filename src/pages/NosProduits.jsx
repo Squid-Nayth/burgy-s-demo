@@ -274,8 +274,14 @@ export default function NosProduits() {
 
         .carte-content {
           background: #fdfdfd;
-          padding: 0 5%;
+          padding: 0 4%;
           min-height: 100vh;
+        }
+        @media (max-width: 600px) {
+          .carte-hero h1 { font-size: 2.5rem; }
+          .carte-hero p { font-size: 0.8rem; }
+          .carte-tab { padding: 0.7rem 0.8rem; font-size: 0.75rem; gap: 0.4rem; }
+          .carte-tab img { width: 22px; height: 22px; }
         }
       `}</style>
 

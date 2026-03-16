@@ -49,7 +49,14 @@ export default function Panier() {
           align-items: start;
         }
         @media (max-width: 760px) {
-          .panier-body { grid-template-columns: 1fr; }
+          .panier-body { grid-template-columns: 1fr; padding: 2rem 5% 4rem; }
+          .panier-recap { position: static; }
+        }
+        @media (max-width: 520px) {
+          .panier-item { grid-template-columns: 64px 1fr; gap: 0.8rem; }
+          .panier-item-right { flex-direction: row; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
+          .panier-item-total { width: 100%; text-align: right; }
+          .panier-header h1 { font-size: 2.5rem; }
         }
 
         /* ── Liste articles ── */

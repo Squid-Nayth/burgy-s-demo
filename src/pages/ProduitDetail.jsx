@@ -501,7 +501,15 @@ export default function ProduitDetail() {
           align-items: start;
         }
         @media (max-width: 760px) {
-          .detail-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+          .detail-grid { grid-template-columns: 1fr; gap: 2rem; padding: 0 5% 4rem; }
+          .product-card { position: static; padding: 1.8rem; }
+          .detail-page { padding-top: 90px; }
+        }
+        @media (max-width: 480px) {
+          .product-card h1 { font-size: 1.6rem; }
+          .product-price { font-size: 1.6rem; }
+          .cart-row { flex-direction: column; align-items: stretch; }
+          .qty-control { justify-content: center; }
         }
 
         .product-card {
@@ -665,7 +673,7 @@ export default function ProduitDetail() {
       {related.length > 0 && (
         <section className="related-section">
           <h2>VOUS AIMEREZ AUSSI</h2>
-          <div className="burger-grid" style={{ maxWidth: '900px', margin: '0 auto' }}>
+          <div className="burger-grid" style={{ maxWidth: '900px', margin: '0 auto', gridTemplateColumns: 'repeat(auto-fit, minmax(min(260px, 100%), 1fr))' }}>
             {related.slice(0, 3).map(([s, p]) => (
               <Link key={s} to={`/nos-produits/${categorie}/${s}`} className="burger-item" style={{ textDecoration: 'none', color: 'inherit' }}>
                 <div className="burger-image-container">
