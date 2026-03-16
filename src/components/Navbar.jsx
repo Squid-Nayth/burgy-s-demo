@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { useCart } from '../context/CartContext'
+import { useAuth } from '../context/AuthContext'
 
 export default function Navbar() {
   const navRef = useRef(null)
@@ -22,6 +23,7 @@ export default function Navbar() {
   }
 
   const { totalItems } = useCart()
+  const { user } = useAuth()
   const isActive = (path) => location.pathname === path ? 'active' : ''
 
   return (
@@ -68,11 +70,14 @@ export default function Navbar() {
               <circle cx="12" cy="10" r="3"></circle>
             </svg>
           </Link>
-          <Link to="/en-construction" className="nav-account" aria-label="Compte">
+          <Link to="/compte" className="nav-account" aria-label="Compte" style={{ position: 'relative' }}>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
               <circle cx="12" cy="7" r="4"></circle>
             </svg>
+            {user && (
+              <span style={{ position: 'absolute', bottom: '-2px', right: '-2px', width: '9px', height: '9px', borderRadius: '50%', background: '#2d7a40', border: '2px solid white' }} />
+            )}
           </Link>
         </div>
       </div>
