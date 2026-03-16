@@ -2260,7 +2260,7 @@ a {
     transform: translateY(-50%) rotate(15deg);
     width: 600px;
     height: 600px;
-    background-image: url('./assets/burgys_B_favicon.png');
+    background-image: url('/assets/burgys_B_favicon.png');
     background-size: contain;
     background-repeat: no-repeat;
     opacity: 0.12; /* Keeps it subtle */
@@ -2342,7 +2342,7 @@ a {
 
 /* Engagements Section (Quick Style) */
 .engagements-banner {
-    background: url('./assets/img3.jpg') center/cover;
+    background: url('/assets/img3.jpg') center/cover;
     position: relative;
     padding: 8rem 5%;
     color: #fff;
@@ -2398,7 +2398,7 @@ a {
 
 /* Recruitment Teaser */
 .recruitment-section {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./assets/recrutement_bg.png') center/cover;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/assets/recrutement_bg.png') center/cover;
     padding: 8rem 5%;
     color: #fff;
 }
