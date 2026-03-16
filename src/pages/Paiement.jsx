@@ -271,7 +271,7 @@ export default function Paiement() {
   if (done) return (
     <>
       <style>{css}</style>
-      <div className="pay-page">
+      <div>
         <div className="pay-hero" style={{ background: '#2d7a40' }}>
           <h1>PAIEMENT CONFIRMÉ !</h1>
           <p>VOTRE COMMANDE EST EN COURS DE PRÉPARATION</p>
@@ -301,7 +301,7 @@ export default function Paiement() {
   return (
     <>
       <style>{css}</style>
-      <div className="pay-page">
+      <div>
         <div className="pay-hero">
           <h1>PAIEMENT</h1>
           <p>SÉCURISÉ • RAPIDE • FIABLE</p>
@@ -486,7 +486,7 @@ export default function Paiement() {
 // ─── CSS ─────────────────────────────────────────────────────────────────────
 const css = `
   .pay-page { padding-top: 110px; min-height: 100vh; background: #fdfaf5; }
-  .pay-hero { background: var(--brand-red); padding: 3rem 5% 2.5rem; color: #fff; }
+  .pay-hero { background: var(--brand-red); padding: 110px 5% 3rem; color: #fff; }
   .pay-hero h1 { font-family: var(--font-heading); font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1; }
   .pay-hero p { font-family: var(--font-heading); opacity: 0.75; letter-spacing: 2px; margin-top: 0.4rem; font-size: 0.85rem; }
 

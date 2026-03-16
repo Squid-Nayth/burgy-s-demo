@@ -308,7 +308,7 @@ export default function Panier() {
   return (
     <>
       <style>{panier_css}</style>
-      <div className="panier-page">
+      <div>
 
         {/* Header */}
         <div className="panier-header">
@@ -562,9 +562,10 @@ const panier_css = `
   }
   .panier-header {
     background: var(--brand-red);
-    padding: 3rem 5% 2.5rem;
+    padding: 110px 5% 3rem;
     color: #fff;
     transition: background 0.4s;
+    text-align: center;
   }
   .panier-header h1 {
     font-family: var(--font-heading);

@@ -23,9 +23,9 @@ function useOrderTimer(createdAt) {
 
 // ─── CSS ──────────────────────────────────────────────────────────────────────
 const css = `
-  .compte-page { padding-top: 110px; min-height: 100vh; background: #fdfaf5; }
+  .compte-page { min-height: 100vh; background: #fdfaf5; }
 
-  .compte-hero { background: var(--brand-red); padding: 3rem 5% 2.5rem; color: #fff; }
+  .compte-hero { text-align: center; background: var(--brand-red); padding: 110px 5% 3rem; color: #fff; }
   .compte-hero h1 { font-family: var(--font-heading); font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1; }
   .compte-hero p { font-family: var(--font-heading); opacity: 0.8; letter-spacing: 2px; margin-top: 0.4rem; font-size: 0.95rem; }
 
@@ -713,7 +713,7 @@ export default function Compte() {
   return (
     <>
       <style>{css}</style>
-      <div className="compte-page">
+      <div className="">
         <div className="compte-hero">
           <h1>{user ? `BONJOUR, ${user.name.split(' ')[0].toUpperCase()} 👋` : 'MON COMPTE'}</h1>
           <p>{user ? `${user.points} POINTS · NIVEAU ${user.level}` : 'CONNECTEZ-VOUS OU CRÉEZ VOTRE COMPTE'}</p>
