@@ -19,9 +19,10 @@ import EnConstruction from './pages/EnConstruction'
 function ScrollToTop() {
   const { pathname } = useLocation()
   useEffect(() => {
-	  if (pathname.startsWith('/nos-produits/')) return
-	  window.scrollTo(0, 0)
-	}, [pathname])
+    // Ne pas remonter en haut lors des changements de catégorie dans /nos-produits
+    if (pathname.startsWith('/nos-produits')) return
+    window.scrollTo(0, 0)
+  }, [pathname])
   return null
 }
 
@@ -40,7 +41,7 @@ function AppLayout() {
           <Route path="/nos-produits/:categorie" element={<NosProduits />} />
 
           {/* Détail produit */}
-          <Route path="/nos-produits/burgers/:slug" element={<ProduitDetail />} />
+          <Route path="/nos-produits/:categorie/:slug" element={<ProduitDetail />} />
 
           <Route path="/reservation" element={<Reservation />} />
           <Route path="/contact" element={<Contact />} />

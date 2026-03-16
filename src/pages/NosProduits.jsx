@@ -34,57 +34,57 @@ const data = {
     { slug: 'big-burgy-xxl',   img: IMG.burger3, name: 'LE BIG BURGY XXL',    price: '6 500 CFA' },
   ],
   menus: [
-    { img: IMG.menus, name: 'MENU CLASSIQUE',        price: '6 500 CFA' },
-    { img: IMG.menus, name: 'MENU DOUBLE SMASH',     price: '8 500 CFA' },
-    { img: IMG.menus, name: 'MENU SPICY CHICKEN',    price: '6 500 CFA' },
-    { img: IMG.menus, name: 'MENU ENFANT',           price: '5 000 CFA' },
-    { img: IMG.menus, name: 'BOX FAMILY (4 pers.)',  price: '24 000 CFA' },
-    { img: IMG.menus, name: 'MENU DUO',              price: '13 000 CFA' },
+    { slug: 'menu-classique',    img: IMG.menus, name: 'MENU CLASSIQUE',       price: '6 500 CFA' },
+    { slug: 'menu-double-smash', img: IMG.menus, name: 'MENU DOUBLE SMASH',    price: '8 500 CFA' },
+    { slug: 'menu-spicy-chicken',img: IMG.menus, name: 'MENU SPICY CHICKEN',   price: '6 500 CFA' },
+    { slug: 'menu-enfant',       img: IMG.menus, name: 'MENU ENFANT',          price: '5 000 CFA' },
+    { slug: 'box-family',        img: IMG.menus, name: 'BOX FAMILY (4 pers.)', price: '24 000 CFA' },
+    { slug: 'menu-duo',          img: IMG.menus, name: 'MENU DUO',             price: '13 000 CFA' },
   ],
   frites: [
-    { img: IMG.frites, name: 'FRITES CLASSIQUES',      price: '1 500 CFA' },
-    { img: IMG.frites, name: 'FRITES XXL ÉPICÉES',     price: '2 000 CFA' },
-    { img: IMG.frites, name: 'FRITES PARMESAN',        price: '2 500 CFA' },
-    { img: IMG.frites, name: 'ONION RINGS (6 pc)',     price: '2 000 CFA' },
-    { img: IMG.frites, name: 'SALADE COLESLAW',        price: '1 500 CFA' },
-    { img: IMG.frites, name: 'NUGGETS POULET (6 pc)',  price: '2 500 CFA' },
+    { slug: 'frites-classiques',   img: IMG.frites, name: 'FRITES CLASSIQUES',     price: '1 500 CFA' },
+    { slug: 'frites-xxl-epicees',  img: IMG.frites, name: 'FRITES XXL ÉPICÉES',    price: '2 000 CFA' },
+    { slug: 'frites-parmesan',     img: IMG.frites, name: 'FRITES PARMESAN',       price: '2 500 CFA' },
+    { slug: 'onion-rings',         img: IMG.frites, name: 'ONION RINGS (6 pc)',    price: '2 000 CFA' },
+    { slug: 'salade-coleslaw',     img: IMG.frites, name: 'SALADE COLESLAW',       price: '1 500 CFA' },
+    { slug: 'nuggets-poulet',      img: IMG.frites, name: 'NUGGETS POULET (6 pc)', price: '2 500 CFA' },
   ],
   boissons: [
-    { img: IMG.boissons, name: 'COCA-COLA 50cl',      price: '1 000 CFA' },
-    { img: IMG.boissons, name: 'FANTA 50cl',          price: '1 000 CFA' },
-    { img: IMG.boissons, name: 'SPRITE 50cl',         price: '1 000 CFA' },
-    { img: IMG.boissons, name: 'MILKSHAKE VANILLE',   price: '2 000 CFA' },
-    { img: IMG.boissons, name: 'MILKSHAKE CHOCOLAT',  price: '2 000 CFA' },
-    { img: IMG.boissons, name: "JUS D'ORANGE FRAIS",  price: '1 500 CFA' },
-    { img: IMG.boissons, name: 'EAU MINÉRALE 50cl',   price: '500 CFA' },
+    { slug: 'coca-cola',        img: IMG.boissons, name: 'COCA-COLA 50cl',     price: '1 000 CFA' },
+    { slug: 'fanta',            img: IMG.boissons, name: 'FANTA 50cl',         price: '1 000 CFA' },
+    { slug: 'sprite',           img: IMG.boissons, name: 'SPRITE 50cl',        price: '1 000 CFA' },
+    { slug: 'milkshake-vanille',img: IMG.boissons, name: 'MILKSHAKE VANILLE',  price: '2 000 CFA' },
+    { slug: 'milkshake-chocolat',img:IMG.boissons, name: 'MILKSHAKE CHOCOLAT', price: '2 000 CFA' },
+    { slug: 'jus-orange',       img: IMG.boissons, name: "JUS D'ORANGE FRAIS", price: '1 500 CFA' },
+    { slug: 'eau-minerale',     img: IMG.boissons, name: 'EAU MINÉRALE 50cl',  price: '500 CFA' },
   ],
   desserts: [
-    { img: IMG.desserts, name: 'SUNDAE VANILLE',     price: '1 500 CFA' },
-    { img: IMG.desserts, name: 'SUNDAE CHOCOLAT',    price: '1 500 CFA' },
-    { img: IMG.desserts, name: 'COOKIE MAISON',      price: '1 000 CFA' },
-    { img: IMG.desserts, name: 'BROWNIE FONDANT',    price: '1 500 CFA' },
-    { img: IMG.desserts, name: 'CHEESECAKE DU JOUR', price: '2 000 CFA' },
+    { slug: 'sundae-vanille',  img: IMG.desserts, name: 'SUNDAE VANILLE',     price: '1 500 CFA' },
+    { slug: 'sundae-chocolat', img: IMG.desserts, name: 'SUNDAE CHOCOLAT',    price: '1 500 CFA' },
+    { slug: 'cookie-maison',   img: IMG.desserts, name: 'COOKIE MAISON',      price: '1 000 CFA' },
+    { slug: 'brownie-fondant', img: IMG.desserts, name: 'BROWNIE FONDANT',    price: '1 500 CFA' },
+    { slug: 'cheesecake',      img: IMG.desserts, name: 'CHEESECAKE DU JOUR', price: '2 000 CFA' },
   ],
   sucreries: [
-    { img: IMG.sucreries, name: 'CHURROS (3 pc)',     price: '1 000 CFA' },
-    { img: IMG.sucreries, name: 'DONUT GLACÉ',        price: '800 CFA' },
-    { img: IMG.sucreries, name: 'MUFFIN MYRTILLES',   price: '1 000 CFA' },
-    { img: IMG.sucreries, name: 'GUIMAUVES GRILLÉES', price: '800 CFA' },
-    { img: IMG.sucreries, name: 'CARAMEL POPCORN',    price: '1 000 CFA' },
+    { slug: 'churros',           img: IMG.sucreries, name: 'CHURROS (3 pc)',     price: '1 000 CFA' },
+    { slug: 'donut-glace',       img: IMG.sucreries, name: 'DONUT GLACÉ',        price: '800 CFA' },
+    { slug: 'muffin-myrtilles',  img: IMG.sucreries, name: 'MUFFIN MYRTILLES',   price: '1 000 CFA' },
+    { slug: 'guimauves-grillees',img: IMG.sucreries, name: 'GUIMAUVES GRILLÉES', price: '800 CFA' },
+    { slug: 'caramel-popcorn',   img: IMG.sucreries, name: 'CARAMEL POPCORN',    price: '1 000 CFA' },
   ],
   sauces: [
-    { img: IMG.sauces, name: "SAUCE BURGY'S SIGNATURE", price: '300 CFA' },
-    { img: IMG.sauces, name: 'SAUCE PIQUANTE MAISON',   price: '300 CFA' },
-    { img: IMG.sauces, name: 'MAYO AILÉE',              price: '300 CFA' },
-    { img: IMG.sauces, name: 'BBQ FUMÉ',                price: '300 CFA' },
-    { img: IMG.sauces, name: 'KETCHUP MAISON',          price: '300 CFA' },
-    { img: IMG.sauces, name: 'SAUCE FROMAGÈRE',         price: '300 CFA' },
+    { slug: 'sauce-signature', img: IMG.sauces, name: "SAUCE BURGY'S SIGNATURE", price: '300 CFA' },
+    { slug: 'sauce-piquante',  img: IMG.sauces, name: 'SAUCE PIQUANTE MAISON',   price: '300 CFA' },
+    { slug: 'mayo-ailee',      img: IMG.sauces, name: 'MAYO AILÉE',              price: '300 CFA' },
+    { slug: 'bbq-fume',        img: IMG.sauces, name: 'BBQ FUMÉ',                price: '300 CFA' },
+    { slug: 'ketchup-maison',  img: IMG.sauces, name: 'KETCHUP MAISON',          price: '300 CFA' },
+    { slug: 'sauce-fromagere', img: IMG.sauces, name: 'SAUCE FROMAGÈRE',         price: '300 CFA' },
   ],
 }
 
 // ─── Section catégorie ────────────────────────────────────────────────────────
 
-function CategorySection({ tab, sectionRefs }) {
+function CategorySection({ tab, sectionRefs, categorie }) {
   const items = data[tab.id] || []
   return (
     <section
@@ -118,7 +118,7 @@ function CategorySection({ tab, sectionRefs }) {
           )
           return item.slug
             ? (
-              <Link key={item.slug} to={`/nos-produits/burgers/${item.slug}`} className="burger-item" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <Link key={item.slug} to={`/nos-produits/${categorie}/${item.slug}`} className="burger-item" style={{ textDecoration: 'none', color: 'inherit' }}>
                 {inner}
               </Link>
             )
@@ -305,7 +305,7 @@ export default function NosProduits() {
       {/* Toutes les sections d'un coup */}
       <div className="carte-content">
         {tabs.map(tab => (
-          <CategorySection key={tab.id} tab={tab} sectionRefs={sectionRefs} />
+          <CategorySection key={tab.id} tab={tab} sectionRefs={sectionRefs} categorie={tab.id} />
         ))}
       </div>
     </>
