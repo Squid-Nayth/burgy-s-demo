@@ -138,7 +138,6 @@ const columns = [
   {
     title: 'Notre Carte',
     links: [
-      { label: 'En ce moment', to: '/#nouveaute' },
       { label: 'Nos Burgers', to: '/nos-produits/burgers' },
       { label: 'Nos Menus', to: '/nos-produits/menus' },
       { label: 'Frites & Salades', to: '/nos-produits/frites' },
@@ -175,8 +174,6 @@ const columns = [
       { label: 'Commander en ligne', to: '/en-construction' },
       { label: 'Réserver une table', to: '/reservation' },
       { label: 'Programme fidélité', to: '/fidelite' },
-      { label: 'Livraison', to: '/contact' },
-      { label: 'Offre étudiants', to: '/en-construction' },
     ],
   },
   {
