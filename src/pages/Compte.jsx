@@ -180,6 +180,49 @@ const css = `
   .btn-save:hover { background: #c01010; }
   .btn-cancel-form { background: none; border: 2px solid #e8d8c8; border-radius: 50px; padding: 0.65rem 1.2rem; font-family: var(--font-heading); font-size: 0.88rem; color: #aaa; cursor: pointer; transition: border-color 0.2s, color 0.2s; }
   .btn-cancel-form:hover { border-color: var(--brand-red); color: var(--brand-red); }
+
+  /* Sécurité & Confidentialité */
+  .sec-section { margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #f0e0d0; }
+  .sec-section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .sec-section-title { font-family: var(--font-heading); font-size: 1rem; color: var(--text-dark); margin-bottom: 0.3rem; letter-spacing: 0.3px; }
+  .sec-section-desc { font-size: 0.82rem; color: #aaa; line-height: 1.5; margin-bottom: 1.2rem; }
+  .sec-field { margin-bottom: 0.9rem; }
+  .sec-field label { display: block; font-family: var(--font-heading); font-size: 0.75rem; color: var(--brand-red); letter-spacing: 0.5px; margin-bottom: 0.35rem; }
+  .sec-field input { width: 100%; padding: 0.7rem 1rem; border: 2px solid #e8d8c8; border-radius: 10px; font-size: 0.9rem; font-family: var(--font-body); background: #fdfaf5; outline: none; transition: border-color 0.2s; }
+  .sec-field input:focus { border-color: var(--brand-red); background: #fff; }
+  .sec-inline { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+  .sec-inline-info { flex: 1; }
+  .sec-inline-info strong { display: block; font-family: var(--font-heading); font-size: 0.9rem; color: var(--text-dark); margin-bottom: 0.2rem; }
+  .sec-inline-info span { font-size: 0.8rem; color: #aaa; line-height: 1.5; }
+  .toggle-switch { position: relative; width: 44px; height: 24px; flex-shrink: 0; }
+  .toggle-switch input { opacity: 0; width: 0; height: 0; position: absolute; }
+  .toggle-track { position: absolute; inset: 0; background: #e0d0c0; border-radius: 24px; cursor: pointer; transition: background 0.25s; }
+  .toggle-track::after { content: ''; position: absolute; left: 3px; top: 3px; width: 18px; height: 18px; background: #fff; border-radius: 50%; transition: transform 0.25s; box-shadow: 0 1px 4px rgba(0,0,0,0.15); }
+  .toggle-switch input:checked + .toggle-track { background: var(--brand-red); }
+  .toggle-switch input:checked + .toggle-track::after { transform: translateX(20px); }
+  .session-card { display: flex; align-items: center; gap: 1rem; padding: 0.9rem 1.1rem; border: 1px solid #f0e0d0; border-radius: 12px; margin-bottom: 0.6rem; }
+  .session-icon { width: 36px; height: 36px; border-radius: 8px; background: #f5f0e8; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: #888; }
+  .session-info { flex: 1; }
+  .session-info strong { display: block; font-family: var(--font-heading); font-size: 0.85rem; color: var(--text-dark); }
+  .session-info span { font-size: 0.75rem; color: #aaa; }
+  .session-current { font-family: var(--font-heading); font-size: 0.68rem; background: #f0fdf4; color: #2d7a40; border: 1px solid #bbf7d0; border-radius: 20px; padding: 2px 10px; }
+  .danger-zone { background: #fff5f5; border: 1px solid #ffd0d0; border-radius: 14px; padding: 1.4rem; margin-top: 1rem; }
+  .danger-title { font-family: var(--font-heading); font-size: 0.9rem; color: var(--brand-red); margin-bottom: 0.4rem; }
+  .danger-desc { font-size: 0.8rem; color: #888; margin-bottom: 1rem; line-height: 1.5; }
+  .btn-danger { background: none; border: 2px solid var(--brand-red); color: var(--brand-red); border-radius: 8px; padding: 0.55rem 1.2rem; font-family: var(--font-heading); font-size: 0.82rem; cursor: pointer; transition: background 0.2s, color 0.2s; }
+  .btn-danger:hover { background: var(--brand-red); color: #fff; }
+  .sec-success { display: flex; align-items: center; gap: 0.5rem; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 0.7rem 1rem; font-size: 0.84rem; color: #2d7a40; margin-top: 0.8rem; font-family: var(--font-heading); }
+  .sec-error { display: flex; align-items: center; gap: 0.5rem; background: #fff0f0; border-left: 3px solid var(--brand-red); border-radius: 0 8px 8px 0; padding: 0.7rem 1rem; font-size: 0.84rem; color: var(--brand-red); margin-top: 0.8rem; }
+  .twofa-code { display: flex; gap: 0.6rem; margin: 1rem 0; }
+  .twofa-code input { width: 44px; height: 52px; text-align: center; font-family: var(--font-heading); font-size: 1.4rem; border: 2px solid #e8d8c8; border-radius: 10px; background: #fdfaf5; outline: none; transition: border-color 0.2s; }
+  .twofa-code input:focus { border-color: var(--brand-red); background: #fff; }
+  .notif-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.9rem 0; border-bottom: 1px solid #f8f0e8; }
+  .notif-row:last-child { border-bottom: none; }
+  .notif-info strong { display: block; font-size: 0.88rem; color: var(--text-dark); font-family: var(--font-heading); }
+  .notif-info span { font-size: 0.76rem; color: #bbb; }
+  .data-item { display: flex; justify-content: space-between; align-items: center; padding: 0.7rem 0; border-bottom: 1px solid #f8f0e8; font-size: 0.85rem; color: #555; }
+  .data-item:last-child { border-bottom: none; }
+  .data-item strong { font-family: var(--font-heading); font-size: 0.82rem; color: var(--text-dark); }
 `
 
 // ─── Auth ─────────────────────────────────────────────────────────────────────
@@ -641,6 +684,283 @@ function MesPaiements({ user, addPaymentMethod, removePaymentMethod }) {
   )
 }
 
+
+// ─── Sécurité ─────────────────────────────────────────────────────────────────
+
+function Toggle({ checked, onChange }) {
+  return (
+    <label className="toggle-switch">
+      <input type="checkbox" checked={checked} onChange={e => onChange(e.target.checked)} />
+      <span className="toggle-track" />
+    </label>
+  )
+}
+
+function Securite({ user, updateProfile, logout }) {
+  // Changement de mot de passe
+  const [pwForm, setPwForm] = useState({ current: '', next: '', confirm: '' })
+  const [pwStatus, setPwStatus] = useState(null) // 'ok' | 'error' | null
+  const [pwMsg, setPwMsg] = useState('')
+
+  // 2FA simulé
+  const [twofa, setTwofa] = useState(user.twofa || false)
+  const [showTwofaSetup, setShowTwofaSetup] = useState(false)
+  const [twofaCode, setTwofaCode] = useState(['','','','','',''])
+  const [twofaStatus, setTwofaStatus] = useState(null)
+
+  // Sessions fictives
+  const sessions = [
+    { id: 1, device: 'Chrome — Windows', location: 'Libreville, Gabon', time: 'Maintenant', current: true },
+    { id: 2, device: 'Safari — iPhone 14', location: 'Libreville, Gabon', time: 'Il y a 2 jours', current: false },
+  ]
+
+  const handleChangePw = (e) => {
+    e.preventDefault()
+    if (pwForm.current.length < 4) { setPwStatus('error'); setPwMsg('Mot de passe actuel incorrect'); return }
+    if (pwForm.next.length < 6)    { setPwStatus('error'); setPwMsg('Le nouveau mot de passe doit faire au moins 6 caractères'); return }
+    if (pwForm.next !== pwForm.confirm) { setPwStatus('error'); setPwMsg('Les mots de passe ne correspondent pas'); return }
+    setPwStatus('ok'); setPwMsg('Mot de passe modifié avec succès')
+    setPwForm({ current: '', next: '', confirm: '' })
+    setTimeout(() => setPwStatus(null), 3000)
+  }
+
+  const handleTwofaCode = (i, val) => {
+    const next = [...twofaCode]; next[i] = val.slice(-1); setTwofaCode(next)
+    if (val && i < 5) document.getElementById(`tfa-${i+1}`)?.focus()
+  }
+
+  const handleTwofaConfirm = () => {
+    const code = twofaCode.join('')
+    if (code === '123456' || code.length === 6) {
+      setTwofa(true); updateProfile({ twofa: true })
+      setTwofaStatus('ok'); setShowTwofaSetup(false); setTwofaCode(['','','','','',''])
+      setTimeout(() => setTwofaStatus(null), 3000)
+    } else {
+      setTwofaStatus('error')
+    }
+  }
+
+  return (
+    <>
+      <h2>SÉCURITÉ</h2>
+
+      {/* Changement de mot de passe */}
+      <div className="sec-section">
+        <div className="sec-section-title">Modifier le mot de passe</div>
+        <div className="sec-section-desc">Utilisez un mot de passe fort d'au moins 8 caractères, avec des chiffres et des symboles.</div>
+        <form onSubmit={handleChangePw}>
+          <div className="sec-field"><label>MOT DE PASSE ACTUEL</label><input type="password" placeholder="••••••••" value={pwForm.current} onChange={e => setPwForm(p => ({ ...p, current: e.target.value }))} /></div>
+          <div className="sec-field"><label>NOUVEAU MOT DE PASSE</label><input type="password" placeholder="••••••••" value={pwForm.next} onChange={e => setPwForm(p => ({ ...p, next: e.target.value }))} /></div>
+          <div className="sec-field"><label>CONFIRMER LE NOUVEAU MOT DE PASSE</label><input type="password" placeholder="••••••••" value={pwForm.confirm} onChange={e => setPwForm(p => ({ ...p, confirm: e.target.value }))} /></div>
+          {pwStatus === 'ok'    && <div className="sec-success"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>{pwMsg}</div>}
+          {pwStatus === 'error' && <div className="sec-error">{pwMsg}</div>}
+          <button type="submit" className="btn-save" style={{ marginTop: '1rem' }}>MODIFIER LE MOT DE PASSE</button>
+        </form>
+      </div>
+
+      {/* Double authentification */}
+      <div className="sec-section">
+        <div className="sec-inline">
+          <div className="sec-inline-info">
+            <strong>Double authentification (2FA)</strong>
+            <span>Recevez un code SMS à chaque connexion pour sécuriser votre compte.</span>
+            {twofa && <span style={{ display: 'block', color: '#2d7a40', fontSize: '0.78rem', marginTop: '0.2rem' }}>✓ Activée sur ce compte</span>}
+          </div>
+          <Toggle
+            checked={twofa}
+            onChange={v => {
+              if (v) { setShowTwofaSetup(true) }
+              else { setTwofa(false); updateProfile({ twofa: false }) }
+            }}
+          />
+        </div>
+        {showTwofaSetup && (
+          <div style={{ marginTop: '1rem', background: '#fdfaf5', borderRadius: '12px', padding: '1.2rem', border: '1px solid #f0e0d0' }}>
+            <div style={{ fontSize: '0.84rem', color: '#555', marginBottom: '0.6rem' }}>
+              Un code a été envoyé au <strong>{user.email}</strong>. Entrez-le pour activer le 2FA.
+              <br /><span style={{ fontSize: '0.75rem', color: '#bbb' }}>Code de démonstration : 123456</span>
+            </div>
+            <div className="twofa-code">
+              {twofaCode.map((v, i) => (
+                <input key={i} id={`tfa-${i}`} type="text" inputMode="numeric" maxLength={1}
+                  value={v} onChange={e => handleTwofaCode(i, e.target.value)}
+                  onKeyDown={e => e.key === 'Backspace' && !v && i > 0 && document.getElementById(`tfa-${i-1}`)?.focus()}
+                />
+              ))}
+            </div>
+            {twofaStatus === 'error' && <div className="sec-error">Code incorrect. Réessayez.</div>}
+            <div style={{ display: 'flex', gap: '0.6rem', marginTop: '0.8rem' }}>
+              <button className="btn-save" onClick={handleTwofaConfirm}>CONFIRMER</button>
+              <button className="btn-cancel-form" onClick={() => { setShowTwofaSetup(false); setTwofaCode(['','','','','','']) }}>ANNULER</button>
+            </div>
+          </div>
+        )}
+        {twofaStatus === 'ok' && <div className="sec-success" style={{ marginTop: '0.8rem' }}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>Double authentification activée</div>}
+      </div>
+
+      {/* Sessions actives */}
+      <div className="sec-section">
+        <div className="sec-section-title">Sessions actives</div>
+        <div className="sec-section-desc">Appareils actuellement connectés à votre compte.</div>
+        {sessions.map(s => (
+          <div className="session-card" key={s.id}>
+            <div className="session-icon">
+              {s.device.includes('iPhone') || s.device.includes('Android')
+                ? <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                : <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              }
+            </div>
+            <div className="session-info">
+              <strong>{s.device}</strong>
+              <span>{s.location} · {s.time}</span>
+            </div>
+            {s.current
+              ? <span className="session-current">Session actuelle</span>
+              : <button className="btn-small-red" onClick={() => {}}>DÉCONNECTER</button>
+            }
+          </div>
+        ))}
+        <button className="btn-cancel-form" style={{ marginTop: '0.5rem' }} onClick={logout}>
+          Déconnecter toutes les autres sessions
+        </button>
+      </div>
+
+      {/* Zone de danger */}
+      <div className="sec-section">
+        <div className="sec-section-title">Zone dangereuse</div>
+        <div className="danger-zone">
+          <div className="danger-title">Supprimer mon compte</div>
+          <div className="danger-desc">Cette action est irréversible. Toutes vos données, commandes et points de fidélité seront définitivement supprimés.</div>
+          <button className="btn-danger" onClick={() => { if (window.confirm('Supprimer définitivement votre compte ?')) logout() }}>
+            SUPPRIMER MON COMPTE
+          </button>
+        </div>
+      </div>
+    </>
+  )
+}
+
+// ─── Confidentialité ──────────────────────────────────────────────────────────
+
+function Confidentialite({ user, updateProfile }) {
+  const prefs = user.notifPrefs || { orderUpdates: true, promos: false, newsletter: false, sms: true }
+  const [notifs, setNotifs] = useState(prefs)
+
+  const updateNotif = (key, val) => {
+    const updated = { ...notifs, [key]: val }
+    setNotifs(updated)
+    updateProfile({ notifPrefs: updated })
+  }
+
+  const [cookieConsent, setCookieConsent] = useState(user.cookieConsent || { analytics: true, marketing: false })
+  const updateCookie = (key, val) => {
+    const updated = { ...cookieConsent, [key]: val }
+    setCookieConsent(updated)
+    updateProfile({ cookieConsent: updated })
+  }
+
+  const [dataReqSent, setDataReqSent] = useState(false)
+
+  const notifItems = [
+    { key: 'orderUpdates', label: 'Mises à jour de commande', desc: 'Statut de votre commande en temps réel' },
+    { key: 'promos',       label: 'Offres & promotions',      desc: "Réductions et offres exclusives Burgy's" },
+    { key: 'newsletter',   label: 'Newsletter',               desc: 'Actualités et nouveautés du restaurant' },
+    { key: 'sms',          label: 'Notifications SMS',        desc: 'Messages texte pour les commandes urgentes' },
+  ]
+
+  return (
+    <>
+      <h2>CONFIDENTIALITÉ</h2>
+
+      {/* Préférences de notifications */}
+      <div className="sec-section">
+        <div className="sec-section-title">Préférences de notifications</div>
+        <div className="sec-section-desc">Choisissez les notifications que vous souhaitez recevoir.</div>
+        {notifItems.map(n => (
+          <div className="notif-row" key={n.key}>
+            <div className="notif-info">
+              <strong>{n.label}</strong>
+              <span>{n.desc}</span>
+            </div>
+            <Toggle checked={notifs[n.key]} onChange={v => updateNotif(n.key, v)} />
+          </div>
+        ))}
+      </div>
+
+      {/* Gestion des cookies */}
+      <div className="sec-section">
+        <div className="sec-section-title">Gestion des cookies</div>
+        <div className="sec-section-desc">Les cookies essentiels sont toujours actifs pour le bon fonctionnement du site.</div>
+        <div className="notif-row">
+          <div className="notif-info">
+            <strong>Cookies essentiels</strong>
+            <span>Nécessaires au fonctionnement du site</span>
+          </div>
+          <span style={{ fontFamily: 'var(--font-heading)', fontSize: '0.75rem', color: '#2d7a40' }}>Toujours actif</span>
+        </div>
+        <div className="notif-row">
+          <div className="notif-info">
+            <strong>Cookies analytiques</strong>
+            <span>Aide à améliorer l'expérience utilisateur</span>
+          </div>
+          <Toggle checked={cookieConsent.analytics} onChange={v => updateCookie('analytics', v)} />
+        </div>
+        <div className="notif-row">
+          <div className="notif-info">
+            <strong>Cookies marketing</strong>
+            <span>Publicités personnalisées selon vos préférences</span>
+          </div>
+          <Toggle checked={cookieConsent.marketing} onChange={v => updateCookie('marketing', v)} />
+        </div>
+      </div>
+
+      {/* Vos données */}
+      <div className="sec-section">
+        <div className="sec-section-title">Vos données personnelles</div>
+        <div className="sec-section-desc">Conformément au RGPD, vous avez le droit d'accéder, de modifier et de supprimer vos données.</div>
+        <div style={{ background: '#fdfaf5', borderRadius: '12px', padding: '1rem 1.2rem', marginBottom: '1.2rem', border: '1px solid #f0e0d0' }}>
+          {[
+            { label: 'Nom', value: user.name },
+            { label: 'Email', value: user.email },
+            { label: 'Membre depuis', value: user.joinedAt },
+            { label: 'Commandes', value: `${user.orders.length} commande${user.orders.length > 1 ? 's' : ''}` },
+            { label: 'Points fidélité', value: `${user.points} pts` },
+            { label: 'Favoris', value: `${user.favorites?.length || 0} produit${(user.favorites?.length || 0) > 1 ? 's' : ''}` },
+          ].map(d => (
+            <div className="data-item" key={d.label}>
+              <strong>{d.label}</strong>
+              <span>{d.value}</span>
+            </div>
+          ))}
+        </div>
+        <div style={{ display: 'flex', gap: '0.8rem', flexWrap: 'wrap' }}>
+          <button className="btn-save" onClick={() => { setDataReqSent(true); setTimeout(() => setDataReqSent(false), 4000) }}>
+            EXPORTER MES DONNÉES
+          </button>
+        </div>
+        {dataReqSent && <div className="sec-success" style={{ marginTop: '0.8rem' }}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>Export en cours, vous recevrez un email sous 24h</div>}
+      </div>
+
+      {/* Politique */}
+      <div className="sec-section">
+        <div className="sec-section-title">Documents légaux</div>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+          {[
+            { label: 'Politique de confidentialité', to: '/mentions-legales#confidentialite' },
+            { label: 'Conditions Générales de Vente', to: '/mentions-legales#cgv' },
+            { label: 'Gestion des cookies', to: '/mentions-legales#cookies' },
+          ].map(l => (
+            <a key={l.label} href={l.to} style={{ fontSize: '0.85rem', color: 'var(--brand-red)', display: 'flex', alignItems: 'center', gap: '0.4rem', padding: '0.3rem 0' }}>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              {l.label}
+            </a>
+          ))}
+        </div>
+      </div>
+    </>
+  )
+}
+
 // ─── Dashboard ────────────────────────────────────────────────────────────────
 
 function Dashboard() {
@@ -659,6 +979,8 @@ function Dashboard() {
     { id: 'fidelite',  label: 'Ma fidélité',   icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> },
     { id: 'adresses',  label: 'Mes adresses',  icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> },
     { id: 'paiements',  label: 'Mes paiements',  icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>, badge: user.paymentMethods?.length || 0 },
+    { id: 'securite',    label: 'Sécurité',          icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> },
+    { id: 'confidentialite', label: 'Confidentialité', icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> },
   ]
 
   const renderSection = () => {
@@ -669,6 +991,8 @@ function Dashboard() {
       case 'fidelite':  return <MaFidelite user={user} />
       case 'adresses':  return <MesAdresses user={user} addAddress={addAddress} removeAddress={removeAddress} />
       case 'paiements':  return <MesPaiements user={user} addPaymentMethod={addPaymentMethod} removePaymentMethod={removePaymentMethod} />
+      case 'securite':    return <Securite user={user} updateProfile={updateProfile} logout={logout} />
+      case 'confidentialite': return <Confidentialite user={user} updateProfile={updateProfile} />
       default: return null
     }
   }
@@ -713,7 +1037,7 @@ export default function Compte() {
   return (
     <>
       <style>{css}</style>
-      <div className="">
+      <div className="compte-page">
         <div className="compte-hero">
           <h1>{user ? `BONJOUR, ${user.name.split(' ')[0].toUpperCase()} 👋` : 'MON COMPTE'}</h1>
           <p>{user ? `${user.points} POINTS · NIVEAU ${user.level}` : 'CONNECTEZ-VOUS OU CRÉEZ VOTRE COMPTE'}</p>
