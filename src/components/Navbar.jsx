@@ -35,7 +35,7 @@ export default function Navbar() {
         <div className="nav-links">
           <Link to="/nos-produits" className={isActive('/nos-produits')}>MENU</Link>
           <Link to="/engagements">ENGAGEMENTS</Link>
-          <Link to="/reservation">FAMILLE</Link>
+          <Link to="/reservation">RÉSERVATION</Link>
         </div>
       </div>
 
@@ -74,7 +74,6 @@ export default function Navbar() {
               <circle cx="12" cy="7" r="4"></circle>
             </svg>
           </Link>
-          <Link to="/en-construction" className="nav-btn-order">COMMANDER</Link>
         </div>
       </div>
     </nav>
