@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { useParams, useNavigate, Link } from 'react-router-dom'
+import { useCart } from '../context/CartContext'
 
 // ─── Images partagées ─────────────────────────────────────────────────────────
 
@@ -442,12 +443,10 @@ export default function ProduitDetail() {
   const navigate = useNavigate()
   const [added, setAdded] = useState(false)
   const [qty, setQty] = useState(1)
+  const { addItem } = useCart()
 
   const categoryData = catalogue[categorie] || {}
   const product = categoryData[slug]
-
-  // Pas de scroll vers le haut — on reste là où on était
-  // (le ScrollToTop de App.jsx ignore /nos-produits/*)
 
   if (!product) {
     return (
@@ -460,6 +459,7 @@ export default function ProduitDetail() {
   }
 
   const handleAddToCart = () => {
+    addItem(product, categorie, slug, qty)
     setAdded(true)
     setTimeout(() => setAdded(false), 2000)
   }

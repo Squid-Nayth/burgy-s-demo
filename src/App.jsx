@@ -15,6 +15,7 @@ import Fidelite from './pages/Fidelite'
 import Allergenes from './pages/Allergenes'
 import MentionsLegales from './pages/MentionsLegales'
 import EnConstruction from './pages/EnConstruction'
+import Panier from './pages/Panier'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -51,6 +52,7 @@ function AppLayout() {
           <Route path="/allergenes" element={<Allergenes />} />
           <Route path="/mentions-legales" element={<MentionsLegales />} />
           <Route path="/en-construction" element={<EnConstruction />} />
+          <Route path="/panier" element={<Panier />} />
         </Routes>
       </main>
       <Footer />

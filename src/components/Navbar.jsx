@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { useCart } from '../context/CartContext'
 
 export default function Navbar() {
   const navRef = useRef(null)
@@ -20,6 +21,7 @@ export default function Navbar() {
     document.body.style.overflow = 'hidden'
   }
 
+  const { totalItems } = useCart()
   const isActive = (path) => location.pathname === path ? 'active' : ''
 
   return (
@@ -33,7 +35,7 @@ export default function Navbar() {
         <div className="nav-links">
           <Link to="/nos-produits" className={isActive('/nos-produits')}>MENU</Link>
           <Link to="/engagements">ENGAGEMENTS</Link>
-          <Link to="/reservation">RÉSERVATION</Link>
+          <Link to="/reservation">FAMILLE</Link>
         </div>
       </div>
 
@@ -43,12 +45,22 @@ export default function Navbar() {
 
       <div className="nav-right">
         <div className="nav-actions">
-          <Link to="/en-construction" className="nav-cart" aria-label="Panier">
+          <Link to="/panier" className="nav-cart" aria-label="Panier" style={{ position: 'relative' }}>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
               <path d="M3 6h18"></path>
               <path d="M16 10a4 4 0 0 1-8 0"></path>
             </svg>
+            {totalItems > 0 && (
+              <span style={{
+                position: 'absolute', top: '-8px', right: '-8px',
+                background: 'var(--brand-yellow)', color: 'var(--brand-red)',
+                borderRadius: '50%', width: '18px', height: '18px',
+                fontSize: '0.65rem', fontFamily: 'var(--font-heading)',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                fontWeight: 700, lineHeight: 1,
+              }}>{totalItems > 9 ? '9+' : totalItems}</span>
+            )}
           </Link>
           <Link to="/#restaurants" className="nav-location" aria-label="Où sommes-nous">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
