@@ -33,7 +33,7 @@ export default function Navbar() {
         <div className="nav-links">
           <Link to="/nos-produits" className={isActive('/nos-produits')}>MENU</Link>
           <Link to="/engagements">ENGAGEMENTS</Link>
-          <Link to="/reservation">FAMILLE</Link>
+          <Link to="/reservation">RÉSERVATION</Link>
         </div>
       </div>
 

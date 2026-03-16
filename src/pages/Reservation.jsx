@@ -16,26 +16,8 @@ export default function Reservation() {
 
   return (
     <>
-      <PageHeader title="COIN FAMILLE" subtitle="RÉSERVEZ VOTRE EXPÉRIENCE BURGY'S" />
+      <PageHeader title="COIN PERSONNALISÉ" subtitle="RÉSERVEZ VOTRE EXPÉRIENCE BURGY'S" />
       <section id="reservation" className="section-light reservation-section">
-        <div className="experience-grid">
-          {/* Pack Family */}
-          <div className="exp-card pack-card">
-            <div className="exp-tag" style={{ background: 'var(--brand-red)', color: '#fff' }}>LE CONCEPT</div>
-            <h4 style={{ fontSize: '2.5rem', color: 'var(--brand-red)' }}>PACK FAMILY</h4>
-            <p className="exp-price" style={{ fontSize: '2rem' }}>18 500 CFA</p>
-            <div className="pack-visual" style={{ margin: '1.5rem 0' }}>
-              <img src="/assets/img6.jpg" alt="Pack Family" style={{ width: '100%', borderRadius: '15px' }} />
-            </div>
-            <ul className="exp-details" style={{ fontFamily: 'var(--font-heading)', fontSize: '1.2rem' }}>
-              <li><strong>4 BURGERS GOURMETS</strong></li>
-              <li><strong>2 GRANDES FRITES CROUSTILLANTES</strong></li>
-              <li><strong>BOISSONS AU CHOIX</strong></li>
-              <li><strong>DESSERTS INCLUS</strong></li>
-            </ul>
-            <button className="btn-primary" style={{ fontSize: '1.2rem', width: '100%' }}>CHOISIR CE PACK</button>
-          </div>
-
           {/* Formulaire */}
           <div className="booking-form-container">
             <form className="reservation-form" onSubmit={handleSubmit}>
@@ -78,7 +60,6 @@ export default function Reservation() {
               <button type="submit" className="btn-primary w-100">VALIDER LA RÉSERVATION</button>
             </form>
           </div>
-        </div>
       </section>
     </>
   )
