@@ -59,21 +59,21 @@ export default function Home() {
         <h2 className="section-title">EN CE MOMENT</h2>
         <div className="promo-grid">
           <div className="promo-card">
-            <img src="/assets/Capture d'écran 2026-03-05 à 19.06.07.png" alt="Promo 1" />
+            <img src="/assets/Capture d’écran 2026-03-05 à 19.06.07.png" alt="Promo 1" />
             <div className="promo-overlay">
               <h3 style={{ fontSize: '2.5rem' }}>Nos burgers irrésistibles</h3>
               <p>Découvrez nos burgers irrésistibles.</p>
             </div>
           </div>
           <div className="promo-card">
-            <img src="/assets/Capture d'écran 2026-03-05 à 18.45.09.png" alt="Promo 2" />
+            <img src="/assets/Capture d’écran 2026-03-05 à 18.45.09.png" alt="Promo 2" />
             <div className="promo-overlay">
               <h3 style={{ fontSize: '2.5rem' }}>LE SMASH ULTIME</h3>
               <p>Croustillant, fondant, inoubliable.</p>
             </div>
           </div>
           <div className="promo-card">
-            <img src="/assets/Capture d'écran 2026-03-05 à 19.03.38.png" alt="Promo 3" />
+            <img src="/assets/Capture d’écran 2026-03-05 à 19.03.38.png" alt="Promo 3" />
             <div className="promo-overlay">
               <h3 style={{ fontSize: '2.5rem' }}>Nos accompagnements gourmands</h3>
               <p>La touche finale parfaite.</p>
@@ -81,47 +81,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Instagram */}
-      <section className="instagram-promo-section">
-        <div className="instagram-content">
-          <div className="instagram-video-wrapper">
-            <div className="instagram-video-container">
-              <div className="instagram-carousel" ref={carouselRef}>
-                {[1, 2, 3, 4].map(n => (
-                  <div className="instagram-carousel-item" key={n}>
-                    <video muted loop playsInline>
-                      <source src={`/assets/social_${n}.mp4`} type="video/mp4" />
-                    </video>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="carousel-dots">
-              {[0, 1, 2, 3].map(i => (
-                <span key={i} className={`dot ${i === 0 ? 'active' : ''}`} data-index={i}></span>
-              ))}
-            </div>
-          </div>
-          <div className="instagram-text">
-            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--brand-red)' }}>
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-              </svg>
-              <h2 style={{ marginBottom: 0 }}>INSTAGRAM</h2>
-            </div>
-            <span className="handle">@BURGYS.GABON</span>
-            <p style={{ fontSize: '1.5rem', maxWidth: '500px', marginBottom: '2rem', opacity: 0.8 }}>
-              Découvrez les coulisses de Burgy's en images et en vidéos. Partagez vos meilleurs moments avec nous !
-            </p>
-            <a href="https://www.instagram.com/burgys.gabon/" target="_blank" rel="noreferrer" className="btn-primary" style={{ background: '#fff', color: '#000' }}>NOUS SUIVRE</a>
-          </div>
-        </div>
-      </section>
-
-      {/* Notre carte gourmet */}
+	  
+	  {/* Notre carte gourmet */}
       <section className="section-light" style={{ padding: '6rem 5%', textAlign: 'center', background: '#fdfaf5' }}>
         <h2 className="section-title">NOTRE CARTE GOURMET</h2>
         <p style={{ fontSize: '1.5rem', margin: '0 auto 4rem', opacity: 0.7, fontFamily: 'var(--font-heading)', letterSpacing: '2px', textAlign: 'center', maxWidth: '800px' }}>
@@ -191,7 +152,46 @@ export default function Home() {
           <a href="https://www.google.com/maps" target="_blank" rel="noreferrer" className="btn-dark" style={{ fontSize: '1.2rem' }}>LIRE PLUS D'AVIS GOOGLE</a>
         </div>
       </section>
-
+	
+	  {/* Instagram */}
+      <section className="instagram-promo-section">
+        <div className="instagram-content">
+          <div className="instagram-video-wrapper">
+            <div className="instagram-video-container">
+              <div className="instagram-carousel" ref={carouselRef}>
+                {[1, 2, 3, 4].map(n => (
+                  <div className="instagram-carousel-item" key={n}>
+                    <video muted loop playsInline>
+                      <source src={`/assets/social_${n}.mp4`} type="video/mp4" />
+                    </video>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="carousel-dots">
+              {[0, 1, 2, 3].map(i => (
+                <span key={i} className={`dot ${i === 0 ? 'active' : ''}`} data-index={i}></span>
+              ))}
+            </div>
+          </div>
+          <div className="instagram-text">
+            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: 'var(--brand-red)' }}>
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+              <h2 style={{ marginBottom: 0 }}>INSTAGRAM</h2>
+            </div>
+            <span className="handle">@BURGYS.GABON</span>
+            <p style={{ fontSize: '1.5rem', maxWidth: '500px', marginBottom: '2rem', opacity: 0.8 }}>
+              Découvrez les coulisses de Burgy's en images et en vidéos. Partagez vos meilleurs moments avec nous !
+            </p>
+            <a href="https://www.instagram.com/burgys.gabon/" target="_blank" rel="noreferrer" className="btn-primary" style={{ background: '#fff', color: '#000' }}>NOUS SUIVRE</a>
+          </div>
+        </div>
+      </section>
+	  
       {/* Recrutement */}
       <section className="recruitment-section">
         <div className="recruitment-card">

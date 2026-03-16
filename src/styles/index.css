@@ -1927,7 +1927,7 @@ a {
 
 .category-grid .category-item {
     cursor: pointer;
-    transition: var(--transition);
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease;
     text-decoration: none;
     display: flex;
     flex-direction: column;
@@ -1935,7 +1935,8 @@ a {
 }
 
 .category-grid .category-item:hover {
-    transform: translateY(-8px);
+    transform: scale(1.07) translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.12);
 }
 
 .category-grid .category-item img {
